@@ -1,0 +1,12 @@
+{
+    "release": {
+        "version": "0.0.1-ALPHA",
+        "notes": [
+            "ISSUE 1 - Building out the Framework",
+            "Build out the readme and version notes for the server.",
+            "Added Auth Default Route",
+            "Added Config Default Route",
+            "Added Version Default Route"
+        ]
+    }
+}
