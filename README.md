@@ -36,7 +36,7 @@ Beowulf server will run locally within your box and can be tested using Postman
 
 There will be a documented option to release on AWS Lambda as a production enviroment
 
-Run Server with debug:
+### Run Server with debug:
 ```sh
 $ npm test
 ```
@@ -45,10 +45,28 @@ Run Server:
 $ npm start
 ```
 
+### Documentation
+ - All information on the project is in the ```/docs``` folder of the project
+ - A postman export of the collection is listed in here. 
+ - - Import the collection to postman and start the server to test. 
+ - The ticket information list is in the spreadsheet marked tickets 
+ - The use case used as a roadmap is also listed in docs. 
+
+### URI Calls
+
+ - ```/``` is the default call and will display a welcome screen to show its working
+ - ```/users``` is the Users Service, it will list users on the system
+ - ```/auth``` is the Authorization Service, this will show a welcome message
+ - ```/alerts``` is the Alerts Service, will return a list of alerts 
+ - ```/calendar``` is the Schedule/Calendar Service and will return a list of appointments/ sched items
+ - ```/cfg``` is the config service, this returns a JSON object of application settings like version
+ - ```/news``` is the news service, this will return a list of news items 
+ - ```/tasks``` is the tasks service, this will return a list of tasks.
+
 ### Todos
 
  - Integrate into AWS Lambda
- - Setup POSTMAN calls and include catalog
+ - Build Out the Services
 
 License
 ----
