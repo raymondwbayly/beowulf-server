@@ -60,6 +60,10 @@ $ npm start
  - ```/alerts``` is the Alerts Service, will return a list of alerts 
  - ```/calendar``` is the Schedule/Calendar Service and will return a list of appointments/ sched items
  - ```/cfg``` is the config service, this returns a JSON object of application settings like version
+ - ```/cfg/version``` Returns the version information
+ - ```/cfg/version/notes``` Returns the version notes
+ - ```/cfg/version/number``` Returns the version number
+ - ```/cfg/support``` Returns support information from the server
  - ```/news``` is the news service, this will return a list of news items 
  - ```/tasks``` is the tasks service, this will return a list of tasks.
 
