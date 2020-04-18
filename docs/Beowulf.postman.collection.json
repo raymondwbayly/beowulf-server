@@ -15,7 +15,15 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": ""
+							"raw": "http://localhost:3000/auth",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth"
+							]
 						},
 						"description": "The Default Call to Auth"
 					},
@@ -113,7 +121,27 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/cfg/",
+							"raw": "http://localhost:3000/cfg",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cfg"
+							]
+						},
+						"description": "This returns the configuration including things like date of release, version, version notes and more. "
+					},
+					"response": []
+				},
+				{
+					"name": "Get Version Info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/cfg/version",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -121,10 +149,75 @@
 							"port": "3000",
 							"path": [
 								"cfg",
-								""
+								"version"
 							]
 						},
-						"description": "This returns the configuration including things like date of release, version, version notes and more. "
+						"description": "This returns the version object only, allowing you to only get the version number, date and link to the notes. "
+					},
+					"response": []
+				},
+				{
+					"name": "Version Number",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/cfg/version/number",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cfg",
+								"version",
+								"number"
+							]
+						},
+						"description": "This retrieves the version number from the config. "
+					},
+					"response": []
+				},
+				{
+					"name": "Get Support Info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/cfg/support",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cfg",
+								"support"
+							]
+						},
+						"description": "Retrieves support information used by the application. \n"
+					},
+					"response": []
+				},
+				{
+					"name": "Version Notes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/cfg/version/notes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cfg",
+								"version",
+								"notes"
+							]
+						},
+						"description": "This returns the version notes from the server. this is the general version notes. "
 					},
 					"response": []
 				}

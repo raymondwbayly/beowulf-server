@@ -20,3 +20,4 @@ These are the task and version notes for the application,  they are filled out d
 ### Building out the Config Service Area
 
 - Create the Config.JSON including the version information and support information
+- Delivered the config.JSON as the default delivery from the server.
