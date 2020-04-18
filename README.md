@@ -57,7 +57,8 @@ $ npm start
  - ```/``` is the default call and will display a welcome screen to show its working
  - ```/users``` is the Users Service, it will list users on the system
  - ```/auth``` is the Authorization Service, this will show a welcome message
- - ```/alerts``` is the Alerts Service, will return a list of alerts 
+ - ```/alerts``` is the Alerts Service, will return a list of alerts
+ - ```/alerts/{id}``` returns a single record to the client
  - ```/calendar``` is the Schedule/Calendar Service and will return a list of appointments/ sched items
  - ```/cfg``` is the config service, this returns a JSON object of application settings like version
  - ```/cfg/version``` Returns the version information
