@@ -24,3 +24,9 @@ These are the task and version notes for the application,  they are filled out d
 - Ability to return the version number
 - Ability to return the support information
 - Ability to return the version notes
+
+### ISSUE 2 Building out the Alerts Service Area
+
+- Default now returns a list of Alerts to the client
+- Created /alerts/{id} that will return a single alert to the client
+- Setup a JSON file library for returning data for the test
