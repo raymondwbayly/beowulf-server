@@ -17,7 +17,10 @@ These are the task and version notes for the application,  they are filled out d
 - Added Tasks Default Route
 - Added Calendar Default Route
 
-### Building out the Config Service Area
+### ISSUE 1.1 Building out the Config Service Area
 
-- Create the Config.JSON including the version information and support information
-- Delivered the config.JSON as the default delivery from the server.
+- Ability to return the config object
+- Ability to return the version information
+- Ability to return the version number
+- Ability to return the support information
+- Ability to return the version notes
