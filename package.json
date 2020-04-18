@@ -1,27 +1,16 @@
 {
-    "name": "api-node-express-server",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "dev": "nodemon ./index.js"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/raymondwbayly/api-node-express-server.git"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/raymondwbayly/api-node-express-server/issues"
-    },
-    "homepage": "https://github.com/raymondwbayly/api-node-express-server#readme",
-    "devDependencies": {
-        "nodemon": "^2.0.3"
-    },
-    "dependencies": {
-        "express": "^4.17.1"
-    }
+  "name": "beowulf-server",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.1"
+  }
 }
