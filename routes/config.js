@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET Auth listing. */
 router.get('/', function(req, res, next) {
-  res.send('The Config Service');
+  res.json({key:"value12"});
 });
 
 module.exports = router;
