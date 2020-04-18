@@ -9,6 +9,20 @@ These are the task and version notes for the application,  they are filled out d
 
   - BW1 - Build out initial Server Application
  -- Build out the readme and version notes for the server. 
- -- 
+
+ - -   Added Auth Default Route
+
+ - -   Added Users Default Route
+
+ - -   Added Config Default Route
+
+ - -   Added Alerts Default Route
+
+ - -   Added News Default Route
+
+ - -   Added Tasks Default Route
+
+ - -   Added Calendar Default Route
+
 
 

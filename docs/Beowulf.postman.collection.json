@@ -1,0 +1,208 @@
+{
+	"info": {
+		"_postman_id": "fc68c845-6f34-49cd-9c18-376cd9296eb0",
+		"name": "Beowulf",
+		"description": "This is the Beowulf collection of endpoint server calls. ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Auth Default",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						},
+						"description": "The Default Call to Auth"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Users (LIST)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								""
+							]
+						},
+						"description": "This is the user list for the user service. "
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Alerts",
+			"item": [
+				{
+					"name": "Alerts List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/alerts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"alerts"
+							]
+						},
+						"description": "This is the Alerts ROute, this returns Alert Information by passing the user ID to the route. "
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Calendar",
+			"item": [
+				{
+					"name": "Calendar (Schedule List)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/calendar/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"calendar",
+								""
+							]
+						},
+						"description": "This is the calendar service and returns the users schedule by passing the ID to the service"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Config",
+			"item": [
+				{
+					"name": "Config Information",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/cfg/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cfg",
+								""
+							]
+						},
+						"description": "This returns the configuration including things like date of release, version, version notes and more. "
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "News",
+			"item": [
+				{
+					"name": "News List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/news",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"news"
+							]
+						},
+						"description": "Returns a list of news items for the user, based on the user ID and geographic location. "
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Tasks",
+			"item": [
+				{
+					"name": "Task List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/tasks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks"
+							]
+						},
+						"description": "This is the task service, this returns a list of tasks for the user based on the user ID. "
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Welcome",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						""
+					]
+				},
+				"description": "This is the welcome call for the Beowulf Node Server"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
