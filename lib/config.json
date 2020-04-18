@@ -1,0 +1,15 @@
+{
+    "title": "Beowulf Suite",
+    "company": "SiteHands Inc.",
+    "version": {
+        "number": "0.1.1",
+        "date": "01/01/2020",
+        "notes": "https://github.com/raymondwbayly/beowulf-server/blob/master/VERSION.md"
+
+    },
+    "support": {
+        "email":"support@company.com",
+        "phone":"800.111.1234"
+    },
+    "copyright": "Sitehands 2020"
+}
