@@ -2,6 +2,11 @@ var express = require('express');
 var router = express.Router();
 var path = require('path');
 var fs = require('fs');
+var ejs = require('ejs');
+var MockExpressRequest = require('mock-express-request');
+var MockExpressResponse = require('mock-express-response');
+
+var response = new MockExpressResponse();
 
 // Alerts File for the static data
 var alertsJSON = path.join(__dirname, '../lib', 'alerts.json');
