@@ -1,0 +1,7 @@
+{
+    "users":
+        [
+        {"firstname": "John", "lastname":"Smith", "date":"01/01/2020", "email":"jsmith@company.com", "phone":"803-222-2123", "mobile":"803-222-1234" , "profile":"https://github.com/raymondwbayly/beowulf-assets/blob/master/img/pub/user-profile.jpeg?raw=true"}
+        ]
+}
+
