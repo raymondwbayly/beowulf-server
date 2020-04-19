@@ -55,6 +55,27 @@
 						"description": "This is the user list for the user service. "
 					},
 					"response": []
+				},
+				{
+					"name": "User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/users/12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"12"
+							]
+						},
+						"description": "This returns the user "
+					},
+					"response": []
 				}
 			],
 			"protocolProfileBehavior": {}
@@ -79,6 +100,27 @@
 							]
 						},
 						"description": "This is the Alerts ROute, this returns Alert Information by passing the user ID to the route. "
+					},
+					"response": []
+				},
+				{
+					"name": "Get Alert",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/alerts/12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"alerts",
+								"12"
+							]
+						},
+						"description": "This gets a single alert"
 					},
 					"response": []
 				}
