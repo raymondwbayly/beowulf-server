@@ -3,9 +3,8 @@
 
 [![N|Solid](https://github.com/raymondwbayly/beowulf-assets/blob/master/img/pub/beowulf-node-server-banner-2.png?raw=true)](https://github.com/raymondwbayly/beowulf-server)
 
-## Beowulf Application Playground showcase
 
-[![N|Solid](https://github.com/raymondwbayly/beowulf-assets/blob/master/img/pub/beowulf-suite-graphic.png?raw=true)](https://github.com/raymondwbayly/beowulf-server)
+[![N|Solid](https://github.com/raymondwbayly/beowulf-assets/blob/master/img/pub/beowulf-suite-graphic-2.png?raw=true)](https://github.com/raymondwbayly/beowulf-server)
 
 Beowulf Server is a Node JS Rest Architecture for supporting the Beowulf prototypes. This server can be run locally on your box and will allow for server calls and connection to a backend for the prototype applications.
 
