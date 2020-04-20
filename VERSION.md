@@ -1,9 +1,9 @@
 # BEOWULF NODE EXPRESS SERVER
 
 
-[![N|Solid](https://github.com/raymondwbayly/beowulf-assets/blob/master/img/pub/sitehands-banner.png?raw=true)](http://www.sitehands.com)
+[![N|Solid](https://github.com/raymondwbayly/beowulf-assets/blob/master/img/pub/sitehands-banner-2.png?raw=true)](http://www.sitehands.com)
 
----
+
 
 [![N|Solid](https://github.com/raymondwbayly/beowulf-assets/blob/master/img/pub/beowulf-node-js-server-banner.png?raw=true)](https://github.com/raymondwbayly/beowulf-server)
 
