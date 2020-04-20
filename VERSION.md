@@ -64,3 +64,14 @@ These are the task and version notes for the application,  they are filled out d
 - Updated the postman collection (download the latest version under ```docs```)
 - Setup documentation for Mock Data Server
 - Include Dependencies in package and package-lock
+
+## Feature 22 Returning a single record 
+
+- Setup the system to use the ID as an index to retrieve a single record from system
+- Setup the auth to return a single record from users 
+- Removed teh single JSON static files and opted to centralize the call and use the JSON library without redunant files
+
+## Feature 23 Centralizing the Message System
+
+- Centralized the system messages to a single function
+- returns the set messages in the bin/messages script. 
