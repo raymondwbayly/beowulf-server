@@ -2,10 +2,11 @@ var express = require('express');
 var router = express.Router();
 var path = require('path');
 var fs = require('fs');
+var Records = require('../bin/records');
 
 // Alerts File for the static data
 var tasksJSON = path.join(__dirname, '../lib', 'tasks.json');
-var taskJSON = path.join(__dirname, '../lib', 'task.json');
+var taskObj =  require(tasksJSON);
 
 /* GET tasks listing. */
 router.get('/', function(req, res, next) {
@@ -15,9 +16,7 @@ router.get('/', function(req, res, next) {
 
 /* GET task Object JSON return. */
 router.get('/:uid', function(req, res, next) {
-  var readable = fs.createReadStream(taskJSON);
-  // req.params.uid is how to access the ID
-  readable.pipe(res);
+  res.send(Records.getSingleRecord(taskObj.tasks,req.params.uid));
 });
 
 module.exports = router;

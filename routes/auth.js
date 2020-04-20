@@ -3,8 +3,10 @@ var router = express.Router();
 var path = require('path');
 var fs = require('fs');
 var Msg = require('../bin/messages');
+var Records = require('../bin/records');
 
-var userJSON = path.join(__dirname, '../lib', 'user.json');
+var usersJSON = path.join(__dirname, '../lib', 'users.json');
+var userObj =  require(usersJSON);
 
 /* GET Auth listing. */
 router.post('/', function(req, res) {
@@ -29,8 +31,7 @@ router.post('/user', function(req, res) {
   var pass = req.body.password;
 
   if(token === '2234FFR1RRDF'){
-    var readable = fs.createReadStream(userJSON);
-    readable.pipe(res);
+    res.send(Records.getSingleRecord(userObj.users,4));
   } else {
     res.send({"message":Msg.getUnAuthorized() , "user":user_id, "location":geo, "Token":token, "Password":pass});
   }
