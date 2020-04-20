@@ -1,17 +1,6 @@
 # BEOWULF NODE EXPRESS SERVER
 
-
-[![N|Solid](https://github.com/raymondwbayly/beowulf-assets/blob/master/img/pub/sitehands-banner-2.png?raw=true)](http://www.sitehands.com)
-
-
-
-[![N|Solid](https://github.com/raymondwbayly/beowulf-assets/blob/master/img/pub/beowulf-node-js-server-banner.png?raw=true)](https://github.com/raymondwbayly/beowulf-server)
-
----
-
-## Beowulf Application Playground showcase
-
-[![N|Solid](https://github.com/raymondwbayly/beowulf-assets/blob/master/img/pub/beowulf-suite-graphic.png?raw=true)](https://github.com/raymondwbayly/beowulf-server)
+[![N|Solid](https://github.com/raymondwbayly/beowulf-assets/blob/master/img/pub/beowulf-node-server-banner-2.png?raw=true)](https://github.com/raymondwbayly/beowulf-server)
 
 ---
 
