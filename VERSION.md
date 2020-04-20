@@ -34,6 +34,11 @@ These are the task and version notes for the application,  they are filled out d
 - Created /alerts/{id} that will return a single alert to the client
 - Setup a JSON file library for returning data for the test
 
+## Feature 6 Application Authorization on the system
+- Passing a post with id, token and geo allows you to authorize the app
+- the token MUST be ```2234FFR1RRDF``` to recieve a successfull authorization
+- Passing the same token to ```auth/user``` along with id, geo and pass will return a user profile and authorize a user on the system
+
 ## Feature 7 Calendar Service Object Returns
 
 - Updated the postman collection (download the latest version under ```docs```)

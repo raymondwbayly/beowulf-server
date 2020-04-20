@@ -94,7 +94,9 @@ Once the server is installed, open a terminal window and to go the folder where 
 - ```/news``` returns the list of news stories to the application.
 - ```/news/112``` returns the specific news story by passing the ID
 - ```/tasks``` returns a list of user tasks from the server
-- ```/tasks/12 returns a single task from the server
+- ```/tasks/12``` returns a single task from the server
+- ```/auth``` authorizes the application on the system, you POST to this call and you must send the token of '2234FFR1RRDF' also pass an id and a location of 'US'.
+- ```/auth/user``` authorizes a user , you must pass the token of ```2234FFR1RRDF``` along with a geo, id and pass , if successul will return user profile JSON
   
 ---
 
