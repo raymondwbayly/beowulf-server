@@ -43,6 +43,10 @@ These are the task and version notes for the application,  they are filled out d
 -  The ```calendar/month``` will return the current month , if you pass a month number it will return that month's events.
 -  The ```calendar/event``` will return the event of the id you pass
 
+## Feature 8 Adding tasks to the Server
+- Adds the ability to list tasks from the server
+- Adds the ability to retrieve a single task from the server
+
 ## Feature 9 Adding News Stories to the Server
 
 - Updated the server to include news stories returned from the server

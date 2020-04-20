@@ -93,6 +93,8 @@ Once the server is installed, open a terminal window and to go the folder where 
 - ```/calendar/month/01``` returns a specific month of events, pass the month
 - ```/news``` returns the list of news stories to the application.
 - ```/news/112``` returns the specific news story by passing the ID
+- ```/tasks``` returns a list of user tasks from the server
+- ```/tasks/12 returns a single task from the server
   
 ---
 
