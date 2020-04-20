@@ -21,6 +21,7 @@ Beowulf Server is a Node JS Rest Architecture for supporting the Beowulf prototy
 - ```npm install```
 - ```DEBUG=myapp:* npm start``` for mac
 - ```set DEBUG=myapp:* & npm start``` for windows.
+-  Open a browser window and point it at ```http://localhost:3000/``` to view the server homepage
 
 ---
 
