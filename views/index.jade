@@ -1,12 +1,19 @@
 extends layout
 
 block content
-  img(src="https://github.com/raymondwbayly/beowulf-assets/blob/master/img/pub/beowulf-node-server-banner-2.png?raw=true")
+  img(src="images/beowulf-node-server-banner-2.png")
   p
-    img(src="https://github.com/raymondwbayly/beowulf-assets/blob/master/img/pub/beowulf-suite-graphic-2.png?raw=true")
-  p
+    img(src="images/beowulf-suite-graphic-2.png")
+  br
+  br
+  br
+  hr
+  br
+  br
   h1 Welcome to #{title}
-  p The Local application server is the backbone to the suite of prototype products for SiteHands X Application Sandbox Suite. This is a test system to ensure the language and processes are in place to be able to build out the next generation of SiteHands products. 
+  H3 Version: #{version}
+  p The Local application server is the backbone to the suite of prototype products for SiteHands X Application Sandbox Suite.
+  p This is a test system to ensure the language and processes are in place to be able to build out the next generation of SiteHands products.
   p Leveraging the latest in language and methods by Google, Facebook and Amazon.
   p For questions or a walk-through on the processes and systems used to build BeoWulf please contact
   p Raymond Bayly
@@ -14,4 +21,11 @@ block content
   p rbayly@sitehands.com | 803.620.5705
   H2 Test Server Calls
   p To view the server calls download (<a href="http://www.postman.com">Postman </a>)
-  p import the file (docs/Beowulf.postman.collection.json).
+  p import the file (<a href="docs/Beowulf.postman.collection.json" target="_blank">Download POSTMAN Collection</a>).
+  br
+  br
+  br
+  hr
+  br
+  br
+  p #{copyright}

@@ -1,6 +1,3 @@
-const getTitle = () => {
-    return 'Beowulf - Node Application Server';
-}
 
 const getSuccess = () => {
   return 'Call to Server was Successfull';
@@ -19,7 +16,6 @@ const getUnAuthorized = () => {
 };
 
 
-exports.getTitle = getTitle;
 exports.getSuccess = getSuccess;
 exports.getFailure = getFailure;
 exports.getAuthorized = getAuthorized;

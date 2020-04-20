@@ -1,0 +1,641 @@
+{
+	"info": {
+		"_postman_id": "fc68c845-6f34-49cd-9c18-376cd9296eb0",
+		"name": "Beowulf",
+		"description": "This is the Beowulf collection of endpoint server calls. ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Auth Default",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "22323",
+									"description": "The ID of the application",
+									"type": "text"
+								},
+								{
+									"key": "token",
+									"value": "2234FFR1RRDF",
+									"description": "The App Token",
+									"type": "text"
+								},
+								{
+									"key": "geo",
+									"value": "US",
+									"description": "The location",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth"
+							]
+						},
+						"description": "The Default Call to Auth"
+					},
+					"response": []
+				},
+				{
+					"name": "Authorize User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "jsmith@company.com",
+									"description": "email of the user",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "jigglyPuff1",
+									"description": "Password of the user",
+									"type": "text"
+								},
+								{
+									"key": "token",
+									"value": "2234FFR1RRDF",
+									"description": "Application Token",
+									"type": "text"
+								},
+								{
+									"key": "geo",
+									"value": "US",
+									"description": "The location of the person",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"user"
+							]
+						},
+						"description": "This authorizes the user on the system"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Users (LIST)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								""
+							]
+						},
+						"description": "This is the user list for the user service. "
+					},
+					"response": []
+				},
+				{
+					"name": "User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/users/12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"12"
+							]
+						},
+						"description": "This returns the user "
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Alerts",
+			"item": [
+				{
+					"name": "Alerts List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/alerts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"alerts"
+							]
+						},
+						"description": "This is the Alerts ROute, this returns Alert Information by passing the user ID to the route. "
+					},
+					"response": []
+				},
+				{
+					"name": "Get Alert",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/alerts/12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"alerts",
+								"12"
+							]
+						},
+						"description": "This gets a single alert"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Calendar",
+			"item": [
+				{
+					"name": "Event",
+					"item": [
+						{
+							"name": "Calendar Get Specific Event",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/calendar/event/132",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"calendar",
+										"event",
+										"132"
+									]
+								},
+								"description": "This gets a specific event"
+							},
+							"response": []
+						}
+					],
+					"description": "These are the event calls for the calendar. ",
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Day",
+					"item": [
+						{
+							"name": "Calendar Get Current Day",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/calendar/day",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"calendar",
+										"day"
+									]
+								},
+								"description": "This returns the current day , you don't have to pass anything to it"
+							},
+							"response": []
+						},
+						{
+							"name": "Calendar Get Specific Day",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/calendar/day/1.1.2020",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"calendar",
+										"day",
+										"1.1.2020"
+									]
+								},
+								"description": "This returns a specific day "
+							},
+							"response": []
+						}
+					],
+					"description": "These are the day calls for the calendar",
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Week",
+					"item": [
+						{
+							"name": "Calendar Get Current Week",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/calendar/week",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"calendar",
+										"week"
+									]
+								},
+								"description": "This gets the current week , "
+							},
+							"response": []
+						},
+						{
+							"name": "Calendar Get Specific week ",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/calendar/week/4.19.2020",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"calendar",
+										"week",
+										"4.19.2020"
+									]
+								},
+								"description": "Returns a specific week, pass the first date of that week and it returns the next seven days. "
+							},
+							"response": []
+						}
+					],
+					"description": "These are the week calls for the calendar",
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Month",
+					"item": [
+						{
+							"name": "Calendar Get Current Month",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/calendar/month",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"calendar",
+										"month"
+									]
+								},
+								"description": "This returns the current month"
+							},
+							"response": []
+						},
+						{
+							"name": "Calendar Get Specific Month",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/calendar/month/01",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"calendar",
+										"month",
+										"01"
+									]
+								},
+								"description": "Pass the month ID and you will recieve the entire month. "
+							},
+							"response": []
+						}
+					],
+					"description": "These are the month calls for the server",
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Calendar (Schedule List)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/calendar/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"calendar",
+								""
+							]
+						},
+						"description": "This is the calendar service and returns the users schedule by passing the ID to the service"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Config",
+			"item": [
+				{
+					"name": "Config Information",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/cfg",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cfg"
+							]
+						},
+						"description": "This returns the configuration including things like date of release, version, version notes and more. "
+					},
+					"response": []
+				},
+				{
+					"name": "Get Version Info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/cfg/version",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cfg",
+								"version"
+							]
+						},
+						"description": "This returns the version object only, allowing you to only get the version number, date and link to the notes. "
+					},
+					"response": []
+				},
+				{
+					"name": "Version Number",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/cfg/version/number",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cfg",
+								"version",
+								"number"
+							]
+						},
+						"description": "This retrieves the version number from the config. "
+					},
+					"response": []
+				},
+				{
+					"name": "Get Support Info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/cfg/support",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cfg",
+								"support"
+							]
+						},
+						"description": "Retrieves support information used by the application. \n"
+					},
+					"response": []
+				},
+				{
+					"name": "Version Notes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/cfg/version/notes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cfg",
+								"version",
+								"notes"
+							]
+						},
+						"description": "This returns the version notes from the server. this is the general version notes. "
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "News",
+			"item": [
+				{
+					"name": "News List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/news",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"news"
+							]
+						},
+						"description": "Returns a list of news items for the user, based on the user ID and geographic location. "
+					},
+					"response": []
+				},
+				{
+					"name": "News Story Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/news/12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"news",
+								"12"
+							]
+						},
+						"description": "This returns a single news story from the server. "
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Tasks",
+			"item": [
+				{
+					"name": "Task List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/tasks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks"
+							]
+						},
+						"description": "This is the task service, this returns a list of tasks for the user based on the user ID. "
+					},
+					"response": []
+				},
+				{
+					"name": "Get Task",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/tasks/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks",
+								"7"
+							]
+						},
+						"description": "This returns a single task"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Welcome",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						""
+					]
+				},
+				"description": "This is the welcome call for the Beowulf Node Server"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
