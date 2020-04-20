@@ -83,7 +83,14 @@ Once the server is installed, open a terminal window and to go the folder where 
 - ```/cfg/support``` Returns support information from the server
 - ```/news``` is the news service, this will return a list of news items
 - ```/tasks``` is the tasks service, this will return a list of tasks.
-
+- ```/calendar``` Returns the current day of events
+- ```/calendar/event/132``` Returns a specific event
+- ```/calendar/day``` returns the current day of events
+- ```/calendar/day/01.01.2020``` returns a specific day of events
+- ```/calendar/week``` returns the current weeks events
+- ```/calendar/week/01.01.2020``` returns a specific week of events
+- ```/calendar/month``` returns the current months events
+- ```/calendar/month/01``` returns a specific month of events, pass the month
 ---
 
 ## Mock Data

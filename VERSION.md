@@ -8,6 +8,7 @@ These are the task and version notes for the application,  they are filled out d
 
 ## ISSUE 1 - Building out the Framework
 
+- Created a postman collection and exported it to ```docs```, download it there to get the latest server call examples. 
 - Build out the readme and version notes for the server.
 - Added Auth Default Route
 - Added Users Default Route
@@ -17,21 +18,33 @@ These are the task and version notes for the application,  they are filled out d
 - Added Tasks Default Route
 - Added Calendar Default Route
 
-## ISSUE 1.1 Building out the Config Service Area
+## Feature 1.1 Building out the Config Service Area
 
+- Updated the postman collection (download the latest version under ```docs```)
 - Ability to return the config object
 - Ability to return the version information
 - Ability to return the version number
 - Ability to return the support information
 - Ability to return the version notes
 
-## ISSUE 2 Building out the Alerts Service Area
+## Feature 2 Building out the Alerts Service Area
 
+- Updated the postman collection (download the latest version under ```docs```)
 - Default now returns a list of Alerts to the client
 - Created /alerts/{id} that will return a single alert to the client
 - Setup a JSON file library for returning data for the test
 
-## ISSUE 12 Mock Data Return on Server
+## Feature 7 Calendar Service Object Returns
 
+- Updated the postman collection (download the latest version under ```docs```)
+- The default ```calendar``` call will return that days events 
+- The ```calendar/week``` will return the current weeks events, if you pass a first day it will return the event for the week specified
+-  The ```calendar/day``` will return the current days events, if you pass a day it will return them for that day 
+-  The ```calendar/month``` will return the current month , if you pass a month number it will return that month's events.
+-  The ```calendar/event``` will return the event of the id you pass
+
+## Feature 12 Mock Data Return on Server
+
+- Updated the postman collection (download the latest version under ```docs```)
 - Setup documentation for Mock Data Server
 - Include Dependencies in package and package-lock

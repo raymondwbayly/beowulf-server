@@ -131,6 +131,189 @@
 			"name": "Calendar",
 			"item": [
 				{
+					"name": "Event",
+					"item": [
+						{
+							"name": "Calendar Get Specific Event",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/calendar/event/132",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"calendar",
+										"event",
+										"132"
+									]
+								},
+								"description": "This gets a specific event"
+							},
+							"response": []
+						}
+					],
+					"description": "These are the event calls for the calendar. ",
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Day",
+					"item": [
+						{
+							"name": "Calendar Get Current Day",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/calendar/day",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"calendar",
+										"day"
+									]
+								},
+								"description": "This returns the current day , you don't have to pass anything to it"
+							},
+							"response": []
+						},
+						{
+							"name": "Calendar Get Specific Day",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/calendar/day/1.1.2020",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"calendar",
+										"day",
+										"1.1.2020"
+									]
+								},
+								"description": "This returns a specific day "
+							},
+							"response": []
+						}
+					],
+					"description": "These are the day calls for the calendar",
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Week",
+					"item": [
+						{
+							"name": "Calendar Get Current Week",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/calendar/week",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"calendar",
+										"week"
+									]
+								},
+								"description": "This gets the current week , "
+							},
+							"response": []
+						},
+						{
+							"name": "Calendar Get Specific week ",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/calendar/week/4.19.2020",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"calendar",
+										"week",
+										"4.19.2020"
+									]
+								},
+								"description": "Returns a specific week, pass the first date of that week and it returns the next seven days. "
+							},
+							"response": []
+						}
+					],
+					"description": "These are the week calls for the calendar",
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Month",
+					"item": [
+						{
+							"name": "Calendar Get Current Month",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/calendar/month",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"calendar",
+										"month"
+									]
+								},
+								"description": "This returns the current month"
+							},
+							"response": []
+						},
+						{
+							"name": "Calendar Get Specific Month",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/calendar/month/01",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"calendar",
+										"month",
+										"01"
+									]
+								},
+								"description": "Pass the month ID and you will recieve the entire month. "
+							},
+							"response": []
+						}
+					],
+					"description": "These are the month calls for the server",
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
 					"name": "Calendar (Schedule List)",
 					"request": {
 						"method": "GET",
