@@ -4,9 +4,11 @@
 
 Beowulf Server is a Node JS Rest Architecture for supporting the Beowulf prototypes. This server can be run locally on your box and will allow for server calls and connection to a backend for the prototype applications.
 
+## Download the repository and install, once you have it installed download postman and set it up based on instructions below
+
 ---
 
-## Install and run
+## Install and run Beowulf Server
 
 - Type some Markdown on the left
 - See HTML in the right
@@ -15,6 +17,14 @@ Beowulf Server is a Node JS Rest Architecture for supporting the Beowulf prototy
 - ```npm install```
 - ```DEBUG=myapp:* npm start``` for mac
 - ```set DEBUG=myapp:* & npm start``` for windows.
+
+---
+
+## POSTMAN (https://www.postman.com/)
+
+- Once you have the server installed and running download postman
+- Import the schema from within the ```docs``` folder under the project.
+- This will give you all the server calls and parameters allowing you to test
 
 ---
 
