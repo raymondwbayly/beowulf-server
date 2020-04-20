@@ -471,6 +471,27 @@
 						"description": "Returns a list of news items for the user, based on the user ID and geographic location. "
 					},
 					"response": []
+				},
+				{
+					"name": "News Story Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/news/12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"news",
+								"12"
+							]
+						},
+						"description": "This returns a single news story from the server. "
+					},
+					"response": []
 				}
 			],
 			"protocolProfileBehavior": {}

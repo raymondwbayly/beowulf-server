@@ -37,11 +37,18 @@ These are the task and version notes for the application,  they are filled out d
 ## Feature 7 Calendar Service Object Returns
 
 - Updated the postman collection (download the latest version under ```docs```)
-- The default ```calendar``` call will return that days events 
+- The default ```calendar``` call will return that days events
 - The ```calendar/week``` will return the current weeks events, if you pass a first day it will return the event for the week specified
--  The ```calendar/day``` will return the current days events, if you pass a day it will return them for that day 
+-  The ```calendar/day``` will return the current days events, if you pass a day it will return them for that day
 -  The ```calendar/month``` will return the current month , if you pass a month number it will return that month's events.
 -  The ```calendar/event``` will return the event of the id you pass
+
+## Feature 9 Adding News Stories to the Server
+
+- Updated the server to include news stories returned from the server
+- Updated POSTMAN to include the new news calls
+- Updated the server to ensure ```/news``` returns the list of news stories to the client
+- Updated the server to ensure that ```/news/112``` returns a specific news story to the client.
 
 ## Feature 12 Mock Data Return on Server
 

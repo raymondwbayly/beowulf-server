@@ -91,6 +91,9 @@ Once the server is installed, open a terminal window and to go the folder where 
 - ```/calendar/week/01.01.2020``` returns a specific week of events
 - ```/calendar/month``` returns the current months events
 - ```/calendar/month/01``` returns a specific month of events, pass the month
+- ```/news``` returns the list of news stories to the application.
+- ```/news/112``` returns the specific news story by passing the ID
+  
 ---
 
 ## Mock Data
