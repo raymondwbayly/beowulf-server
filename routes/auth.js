@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var path = require('path');
 var fs = require('fs');
+var Msg = require('../bin/messages');
 
 var userJSON = path.join(__dirname, '../lib', 'user.json');
 
@@ -13,10 +14,10 @@ router.post('/', function(req, res) {
   var rtString = '';
 
   if (token === '2234FFR1RRDF'){
-    rtString = 'Application is Authorized with Token ' + token + '  Application ID: ' + user_id + '  and Location of ' + geo;
+    rtString = Msg.getAuthorized() + ' with Token ' + token + '  Application ID: ' + user_id + '  and Location of ' + geo;
 
   } else {
-    rtString = 'Application is not Authorized the token ' + token + ' Was not in our system';
+    rtString = Msg.getUnAuthorized() + ' the token ' + token + ' Was not in our system';
   }
   res.send(rtString);
 });
@@ -31,7 +32,7 @@ router.post('/user', function(req, res) {
     var readable = fs.createReadStream(userJSON);
     readable.pipe(res);
   } else {
-    res.send({"message":"this user is not authorized", "user":user_id, "location":geo, "Token":token, "Password":pass});
+    res.send({"message":Msg.getUnAuthorized() , "user":user_id, "location":geo, "Token":token, "Password":pass});
   }
 });
 
