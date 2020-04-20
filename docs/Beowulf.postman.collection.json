@@ -12,8 +12,31 @@
 				{
 					"name": "Auth Default",
 					"request": {
-						"method": "GET",
+						"method": "POST",
 						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "22323",
+									"description": "The ID of the application",
+									"type": "text"
+								},
+								{
+									"key": "token",
+									"value": "2234FFR1RRDF",
+									"description": "The App Token",
+									"type": "text"
+								},
+								{
+									"key": "geo",
+									"value": "US",
+									"description": "The location",
+									"type": "text"
+								}
+							]
+						},
 						"url": {
 							"raw": "http://localhost:3000/auth",
 							"protocol": "http",
@@ -26,6 +49,56 @@
 							]
 						},
 						"description": "The Default Call to Auth"
+					},
+					"response": []
+				},
+				{
+					"name": "Authorize User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "jsmith@company.com",
+									"description": "email of the user",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "jigglyPuff1",
+									"description": "Password of the user",
+									"type": "text"
+								},
+								{
+									"key": "token",
+									"value": "2234FFR1RRDF",
+									"description": "Application Token",
+									"type": "text"
+								},
+								{
+									"key": "geo",
+									"value": "US",
+									"description": "The location of the person",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"user"
+							]
+						},
+						"description": "This authorizes the user on the system"
 					},
 					"response": []
 				}
