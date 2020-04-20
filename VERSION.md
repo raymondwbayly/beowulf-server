@@ -1,6 +1,6 @@
 # BEOWULF NODE EXPRESS SERVER
 
-[![N|Solid](https://github.com/raymondwbayly/beowulf-assets/blob/master/img/pub/beowulf-express-server-banner.png?raw=true)](https://github.com/raymondwbayly/beowulf-server)
+[![N|Solid](https://github.com/raymondwbayly/beowulf-assets/blob/master/img/pub/beowulf-node-js-server-banner.png?raw=true)](https://github.com/raymondwbayly/beowulf-server)
 
 ## Version Notes - Beowulf - Version Notes
 
