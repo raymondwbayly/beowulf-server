@@ -112,6 +112,11 @@ Once the server is installed, open a terminal window and to go the folder where 
 - ```/tasks/12``` returns a single task from the server
 - ```/auth``` authorizes the application on the system, you POST to this call and you must send the token of '2234FFR1RRDF' also pass an id and a location of 'US'.
 - ```/auth/user``` authorizes a user , you must pass the token of ```2234FFR1RRDF``` along with a geo, id and pass , if successul will return user profile JSON
+- ```/lookup``` The default display of the lookup service, right now its a text return to ensure it s working. 
+- ```lookup/timezones``` returns a list of timezones
+- ```lookup/timezone/1``` returns a single timezone based on index. 
+- ```lookup/jobtitles``` returns a list of job titles. 
+- ```lookup/jobtitle/1``` returns a single job title based on index
   
 ---
 
