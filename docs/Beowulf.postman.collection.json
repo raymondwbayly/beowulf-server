@@ -620,6 +620,56 @@
 			"name": "LookUp",
 			"item": [
 				{
+					"name": "timezones",
+					"item": [
+						{
+							"name": "Timezones (List)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/lookup/timezones",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"lookup",
+										"timezones"
+									]
+								},
+								"description": "This is the list of timezones"
+							},
+							"response": []
+						},
+						{
+							"name": "Timezone (Single)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/lookup/timezone/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"lookup",
+										"timezone",
+										"3"
+									]
+								},
+								"description": "Returns a single timezone based on the index"
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
 					"name": "Default (Description)",
 					"request": {
 						"method": "GET",
