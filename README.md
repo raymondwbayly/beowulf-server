@@ -95,6 +95,7 @@ Once the server is installed, open a terminal window and to go the folder where 
 |```/alerts/{uid}```            |  GET   |  ITEM     | Single Alert Record           |
 |```/alerts```                  |  POST  |  STRING   | Add an alert to the server    |
 |```/alerts```                  |  PUT   |  STRING   | Update an Alert               |
+|```/alerts/{uid}```            | DELETE |  STRING   | Deletes an Alert              |
 |   AUTH CALLS                                                                       |
 |```/auth```                    |  POST  | AUTH APP  |  Authorizes app on the server |
 |```/auth/user```               |  POST  | AUTH USER |  Authorizes user on server    |

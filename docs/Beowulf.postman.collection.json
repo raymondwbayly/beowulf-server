@@ -324,6 +324,27 @@
 						"description": "This is the alert update"
 					},
 					"response": []
+				},
+				{
+					"name": "Delete Alert",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/alerts/12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"alerts",
+								"12"
+							]
+						},
+						"description": "This simulates teh deletion of an alert. "
+					},
+					"response": []
 				}
 			],
 			"protocolProfileBehavior": {}

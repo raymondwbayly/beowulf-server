@@ -23,6 +23,10 @@ const getUpdatedMessage = () => {
     return 'The Record has been Updated, Record: ' + '\n'
 }
 
+const getDeleteMessage = () => {
+    return 'The Record has been deleted ' + '\n'
+}
+
 
 exports.getSuccess = getSuccess;
 exports.getFailure = getFailure;
@@ -30,3 +34,4 @@ exports.getAuthorized = getAuthorized;
 exports.getUnAuthorized = getUnAuthorized;
 exports.getSavedMessage = getSavedMessage;
 exports.getUpdatedMessage = getUpdatedMessage;
+exports.getDeleteMessage = getDeleteMessage;

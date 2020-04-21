@@ -56,8 +56,9 @@ router.put('/', function(req, res, next) {
 });
 
 /* DELETE delete record */
-router.delete('/', function(req, res, next) {
-  res.send('this is the post function')
+router.delete('/:uid', function(req, res, next) {
+
+  res.send(Msg.getDeleteMessage() + 'ID:' + req.params.uid)
 });
 
 module.exports = router;
