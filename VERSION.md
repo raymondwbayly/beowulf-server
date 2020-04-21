@@ -94,3 +94,8 @@ These are the task and version notes for the application,  they are filled out d
 
 - Created the ability to simulate an update
 - Updated POSTMAN with the call
+
+## Feature 34 Alerts (Update an Alert)
+
+- Created the ability to simulate a delete
+- Updated POSTMAN with the call
