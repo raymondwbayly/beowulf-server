@@ -105,6 +105,7 @@ Once the server is installed, open a terminal window and to go the folder where 
 |   CALENDAR CALLS                                                                   |
 |```/calendar```                |  GET   | LIST      |  Lists the days events        |
 |```/calendar/event/{uid}```    |  GET   | LIST      |  Returns list of days events  |
+|```/calendar/event```          |  POST  | STRING    |  Adds event to server         |
 |```/calendar/day/{date}```     |  GET   | LIST      |  Returns specific day events  |
 |```/calendar/week```           |  GET   | LIST      |  Returns the weeks events     |
 |```/calendar/week/{date}```    |  GET   | LIST      |  Returns seven days of events |

@@ -1,0 +1,44 @@
+{
+  "calendar-event": [
+    {
+      "id": "1",
+      "user": "1",
+      "name": "John Smith",
+      "email": "jsmith@company.com",
+      "location": "Charlotte, NC",
+      "Duration": "30 Minutes",
+      "start-date": "4:13:2020",
+      "start-time": "8:30 AM",
+      "end-date": "4:13:2020",
+      "end-time": "9:00 AM",
+      "subject": "Morning Managers Meeting held daily",
+      "body": "The morning managers meeting is held every day for thirty minutes to update management on daily tasks.",
+      "attendees": [
+        {
+          "id": "1",
+          "firstname": "John",
+          "lastname": "smith",
+          "email": "jsmith@company.com"
+        },
+        {
+          "id": "4",
+          "firstname": "Toby",
+          "lastname": "Keith",
+          "email": "tkeith@company.com"
+        },
+        {
+          "id": "1",
+          "firstname": "William",
+          "lastname": "Robert",
+          "email": "wrobert@company.com"
+        },
+        {
+          "id": "12",
+          "firstname": "Toby",
+          "lastname": "Zulu",
+          "email": "tzulu@company.com"
+        }
+      ]
+    }
+  ]
+}

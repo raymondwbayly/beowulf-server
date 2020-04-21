@@ -99,3 +99,8 @@ These are the task and version notes for the application,  they are filled out d
 
 - Created the ability to simulate a delete
 - Updated POSTMAN with the call
+
+## Feature 35 Alerts (Adds Calendar Event)
+
+- Created the ability to simulate an event add
+- Updated POSTMAN with the call
