@@ -83,3 +83,9 @@ These are the task and version notes for the application,  they are filled out d
 - Create the ability to lookup and return lists of values
 - Create the ability to return job title title
 - Create the ability to return a list of timezones
+
+## Feature 32 Alerts (Add an Alert)
+
+- Adds the post call to simulate adding an alert
+- Updated the URI calls in the Readme to reformat
+- Added the CRUD calls to the alert file

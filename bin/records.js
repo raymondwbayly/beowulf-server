@@ -8,6 +8,11 @@ const getSingleRecord = (obj,num) => {
     return obj[tmpInd];
 }
 
+const buildRecord = (obj,num) => {
+    var retJSON = {};
+    return retJSON;
+}
+
 
 exports.getSingleRecord = getSingleRecord;
 exports.getSig

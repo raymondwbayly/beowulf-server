@@ -85,39 +85,48 @@ Once the server is installed, open a terminal window and to go the folder where 
 
 ## URI Calls
 
-- ```/``` is the default call and will display a welcome screen to show its working
-- ```/users``` is the Users Service, it will list users on the system
-- ```/auth``` is the Authorization Service, this will show a welcome message
-- ```/alerts``` is the Alerts Service, will return a list of alerts
-- ```/alerts/{id}``` returns a single record to the client
-- ```/calendar``` is the Schedule/Calendar Service and will return a list of appointments/ sched items
-- ```/cfg``` is the config service, this returns a JSON object of application settings like version
-- ```/cfg/version``` Returns the version information
-- ```/cfg/version/notes``` Returns the version notes
-- ```/cfg/version/number``` Returns the version number
-- ```/cfg/support``` Returns support information from the server
-- ```/news``` is the news service, this will return a list of news items
-- ```/tasks``` is the tasks service, this will return a list of tasks.
-- ```/calendar``` Returns the current day of events
-- ```/calendar/event/132``` Returns a specific event
-- ```/calendar/day``` returns the current day of events
-- ```/calendar/day/01.01.2020``` returns a specific day of events
-- ```/calendar/week``` returns the current weeks events
-- ```/calendar/week/01.01.2020``` returns a specific week of events
-- ```/calendar/month``` returns the current months events
-- ```/calendar/month/01``` returns a specific month of events, pass the month
-- ```/news``` returns the list of news stories to the application.
-- ```/news/112``` returns the specific news story by passing the ID
-- ```/tasks``` returns a list of user tasks from the server
-- ```/tasks/12``` returns a single task from the server
-- ```/auth``` authorizes the application on the system, you POST to this call and you must send the token of '2234FFR1RRDF' also pass an id and a location of 'US'.
-- ```/auth/user``` authorizes a user , you must pass the token of ```2234FFR1RRDF``` along with a geo, id and pass , if successul will return user profile JSON
-- ```/lookup``` The default display of the lookup service, right now its a text return to ensure it s working. 
-- ```lookup/timezones``` returns a list of timezones
-- ```lookup/timezone/1``` returns a single timezone based on index. 
-- ```lookup/jobtitles``` returns a list of job titles. 
-- ```lookup/jobtitle/1``` returns a single job title based on index
-  
+- All URI calls can be tested and modeled from the POSTMAN file in docs, simply import it into a new collection.
+
+| URI                           | CALL   | RETURN    |  NOTES                        |
+| ------                        | ------ | ------    | ------                        |
+|```/```                        |  GET   | HTML PAGE | Server Information Page       |
+|   ALERT CALLS                                                                      |
+|```/alerts```                  |  GET   |  LIST     | List of Alerts                |
+|```/alerts/{uid}```            |  GET   |  ITEM     | Single Alert Record           |
+|```/alerts```                  |  POST  |  STRING   | Add an alert to the server    |
+|   AUTH CALLS                                                                       |
+|```/auth```                    |  POST  | AUTH APP  |  Authorizes app on the server |
+|```/auth/user```               |  POST  | AUTH USER |  Authorizes user on server    |
+|   USER CALLS                                                                       |
+|```/users```                   |  GET   | LIST      |  Lists Users                  |
+|```/users/{uid}```             |  GET   | ITEM      |  Displays a single User       |
+|   CALENDAR CALLS                                                                   |
+|```/calendar```                |  GET   | LIST      |  Lists the days events        |
+|```/calendar/event/{uid}```    |  GET   | LIST      |  Returns list of days events  |
+|```/calendar/day/{date}```     |  GET   | LIST      |  Returns specific day events  |
+|```/calendar/week```           |  GET   | LIST      |  Returns the weeks events     |
+|```/calendar/week/{date}```    |  GET   | LIST      |  Returns seven days of events |
+|```/calendar/month```          |  GET   | LIST      |  Returns list of current month|
+|```/calendar/month/{month}```  |  GET   | LIST      |  List of months events        |
+|   NEWS CALLS                                                                       |
+|```/news```                    |  GET   | LIST      |  List of News Stories         |
+|```/news/{uid}```              |  GET   | ITEM      |  Specific news Story          |
+|   TASK CALLS                                                                       |
+|```/tasks```                   |  GET   | LIST      |  List of Users Tasks          |
+|```/tasks/{uid}```             |  GET   | ITEM      |  A task                       |
+|   CONFIG CALLS                                                                     |
+|```/cfg```                     |  GET   | LIST      |  Application Settings (JSON)  |
+|```/cfg/version```             |  GET   | JSON      |  Returns Version Object       |
+|```/cfg/version/notes```       |  GET   | JSON      |  Returns Version Notes        |
+|```/cfg/version/number```      |  GET   | JSON      |  Returns version number       |
+|```/cfg/support```             |  GET   | JSON      |  REturns Support Info         |
+|   LOOKUP CALLS                                                                     |
+|```/lookup```                  |  GET   | STRING    |  Text return to show working  |
+|```/lookup/timezones```        |  GET   | LIST      |  List of Timezones            |
+|```/lookup/timezone/{uid}```   |  GET   | JSON      |  Timezone information         |
+|```/lookup/jobtitles```        |  GET   | LIST      |  List of Job Titles           |
+|```/lookup/jobtitle/{uid}```   |  GET   | JSON      |  Returns Job Title Info       |
+
 ---
 
 ## Mock Data
