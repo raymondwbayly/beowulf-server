@@ -1,5 +1,9 @@
 var express = require('express');
 var router = express.Router();
+var path = require('path');
+var fs = require('fs');
+var ejs = require('ejs');
+var Records = require('../bin/records');
 
 
 /* GET tasks listing. */
