@@ -257,6 +257,73 @@
 						"description": "This creates the alert, this allows us to update the record index with a new one, this is a simulation. "
 					},
 					"response": []
+				},
+				{
+					"name": "Alert Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "1",
+									"description": "ID of the Alert",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "Test title",
+									"description": "Title of the alert",
+									"type": "text"
+								},
+								{
+									"key": "date",
+									"value": "01/01/2020",
+									"description": "Date of the alert",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "This is a test alert to simulate upfating one ",
+									"description": "Description of the Alert",
+									"type": "text"
+								},
+								{
+									"key": "author",
+									"value": "Raymond Bayly",
+									"description": "The author of the alert",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "jsmith@company.com",
+									"description": "Email of the reciepent of the alert",
+									"type": "text"
+								},
+								{
+									"key": "token",
+									"value": "sdgergt453",
+									"description": "Authorization token",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/alerts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"alerts"
+							]
+						},
+						"description": "This is the alert update"
+					},
+					"response": []
 				}
 			],
 			"protocolProfileBehavior": {}
