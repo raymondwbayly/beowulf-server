@@ -89,3 +89,8 @@ These are the task and version notes for the application,  they are filled out d
 - Adds the post call to simulate adding an alert
 - Updated the URI calls in the Readme to reformat
 - Added the CRUD calls to the alert file
+
+## Feature 33 Alerts (Update an Alert)
+
+- Created the ability to simulate an update
+- Updated POSTMAN with the call

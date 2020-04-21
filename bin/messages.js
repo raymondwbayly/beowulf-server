@@ -19,9 +19,14 @@ const getSavedMessage = () => {
     return 'The Record has been saved, Record: ' + '\n'
 }
 
+const getUpdatedMessage = () => {
+    return 'The Record has been Updated, Record: ' + '\n'
+}
+
 
 exports.getSuccess = getSuccess;
 exports.getFailure = getFailure;
 exports.getAuthorized = getAuthorized;
 exports.getUnAuthorized = getUnAuthorized;
 exports.getSavedMessage = getSavedMessage;
+exports.getUpdatedMessage = getUpdatedMessage;

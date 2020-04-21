@@ -44,7 +44,15 @@ router.get('/:uid', function(req, res, next) {
 
 /* PUT UPDATE RECORD */
 router.put('/', function(req, res, next) {
-  res.send('this is the put function')
+  var id = req.body.id;
+  var title = req.body.title;
+  var date = req.body.date;
+  var desc = req.body.description;
+  var author = req.body.author;
+  var email = req.body.email;
+  var token = req.body.token;
+  var alertPostJSON = {'id':id, 'title':title, 'date': date, 'description': desc, 'author': author, 'email': email, 'token': token}
+  res.send(Msg.getUpdatedMessage() + JSON.stringify(alertPostJSON))
 });
 
 /* DELETE delete record */
