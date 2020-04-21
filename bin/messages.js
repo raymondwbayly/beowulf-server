@@ -15,8 +15,13 @@ const getUnAuthorized = () => {
     return 'The user or system could not be authorized on the server, please check the URI or variables you passed';
 };
 
+const getSavedMessage = () => {
+    return 'The Record has been saved, Record: ' + '\n'
+}
+
 
 exports.getSuccess = getSuccess;
 exports.getFailure = getFailure;
 exports.getAuthorized = getAuthorized;
 exports.getUnAuthorized = getUnAuthorized;
+exports.getSavedMessage = getSavedMessage;

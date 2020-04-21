@@ -157,7 +157,7 @@
 			"name": "Alerts",
 			"item": [
 				{
-					"name": "Alerts List",
+					"name": "List Alerts",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -177,7 +177,7 @@
 					"response": []
 				},
 				{
-					"name": "Get Alert",
+					"name": "Read Alert",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -194,6 +194,67 @@
 							]
 						},
 						"description": "This gets a single alert"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Alert",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "New Alert",
+									"description": "This is the title of the alert",
+									"type": "text"
+								},
+								{
+									"key": "date",
+									"value": "01/1/2020",
+									"description": "date of the alert",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "This is a new alert ",
+									"description": "This is the description",
+									"type": "text"
+								},
+								{
+									"key": "author",
+									"value": "Raymond Bayly",
+									"description": "This is the author of the alert",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "jsmith@company.com",
+									"description": "This is who the alert is for. ",
+									"type": "text"
+								},
+								{
+									"key": "token",
+									"value": "erg4twhy4y54h4",
+									"description": "This is the auth token to allow for permissions. ",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/alerts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"alerts"
+							]
+						},
+						"description": "This creates the alert, this allows us to update the record index with a new one, this is a simulation. "
 					},
 					"response": []
 				}
@@ -670,6 +731,56 @@
 					"_postman_isSubFolder": true
 				},
 				{
+					"name": "Job Titles",
+					"item": [
+						{
+							"name": "List Job Titles",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/lookup/jobtitles",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"lookup",
+										"jobtitles"
+									]
+								},
+								"description": "This lists the job titles "
+							},
+							"response": []
+						},
+						{
+							"name": "Get Job Title",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/lookup/jobtitle/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"lookup",
+										"jobtitle",
+										"3"
+									]
+								},
+								"description": "Gets single job title. "
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
 					"name": "Default (Description)",
 					"request": {
 						"method": "GET",
@@ -699,14 +810,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/lookup",
+					"raw": "http://localhost:3000/",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
-						"lookup"
+						""
 					]
 				},
 				"description": "This is the welcome call for the Beowulf Node Server"
