@@ -13,6 +13,7 @@ var calendarRouter = require('./routes/calendar');
 var configRouter = require('./routes/config');
 var newsRouter = require('./routes/news');
 var tasksRouter = require('./routes/tasks');
+var lookupRouter = require('./routes/lookup');
 
 var app = express();
 
@@ -38,6 +39,7 @@ app.use('/calendar', calendarRouter);
 app.use('/cfg', configRouter);
 app.use('/news', newsRouter);
 app.use('/tasks', tasksRouter);
+app.use('/lookup', lookupRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
