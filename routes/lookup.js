@@ -9,6 +9,9 @@ var Records = require('../bin/records');
 var timezonesPATH = path.join(__dirname, '../lib/lookup', 'timezones.json');
 var timezonesJSON =  require(timezonesPATH);
 
+var jobtitlesPATH = path.join(__dirname, '../lib/lookup', 'titles.json');
+var jobtitlesJSON =  require(jobtitlesPATH);
+
 
 /* GET tasks listing. */
 router.get('/', function(req, res, next) {
@@ -16,14 +19,14 @@ router.get('/', function(req, res, next) {
 });
 
 /* GET Time Zones List. */
-router.get('/timezones', function(req, res, next) {
-    var readable = fs.createReadStream(timezonesPATH);
+router.get('/jobtitles', function(req, res, next) {
+    var readable = fs.createReadStream(jobtitlesPATH);
     readable.pipe(res);
 });
 
 /* GET Retrieve a Time Zone. */
-router.get('/timezone/:uid', function(req, res, next) {
-    res.send(Records.getSingleRecord(timezonesJSON,req.params.uid));
+router.get('/jobtitle/:uid', function(req, res, next) {
+    res.send(Records.getSingleRecord(jobtitlesJSON.titles,req.params.uid));
 });
 
 

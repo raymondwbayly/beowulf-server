@@ -4,6 +4,7 @@ const getSingleRecord = (obj,num) => {
     if(num > totalKeys){
         tmpInd = 1;
     }
+    console.log(obj);
     return obj[tmpInd];
 }
 
