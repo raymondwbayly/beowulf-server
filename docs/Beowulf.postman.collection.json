@@ -289,7 +289,27 @@
 							]
 						},
 						"url": {
-							"raw": "http://localhost:3000/users/",
+							"raw": "http://localhost:3000/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						},
+						"description": "This is the update user call"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/users/332",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -297,10 +317,32 @@
 							"port": "3000",
 							"path": [
 								"users",
-								""
+								"332"
 							]
 						},
-						"description": "This is the update user call"
+						"description": "This allows you to remove the user from the system"
+					},
+					"response": []
+				},
+				{
+					"name": "Deactivate User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/users/deactivate/332",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"deactivate",
+								"332"
+							]
+						},
+						"description": "This allows you to deactivate the user on the system"
 					},
 					"response": []
 				}

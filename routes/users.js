@@ -53,4 +53,15 @@ router.put('/', function(req, res, next) {
   res.send(Msg.getUpdatedMessage() + JSON.stringify(userPostJSON))
 });
 
+/* DELETE delete record */
+router.delete('/:uid', function(req, res, next) {
+
+  res.send(Msg.getDeleteMessage() + 'ID:' + req.params.uid)
+});
+
+/* GET Config Object JSON return. */
+router.get('/deactivate/:uid', function(req, res, next) {
+  res.send('User has been deactivated on the server');
+});
+
 module.exports = router;
