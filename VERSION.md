@@ -125,3 +125,8 @@ These are the task and version notes for the application,  they are filled out d
 
 - Setup the ability to save  news story on the server
 - Updated POSTMAN with the call
+
+## Feature 40 News (Delete News Event)
+
+- Setup the ability to delete a news story
+- Updated POSTMAN with the call

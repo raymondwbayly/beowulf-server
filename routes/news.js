@@ -48,4 +48,10 @@ router.put('/', function(req, res, next) {
   res.send(Msg.getUpdatedMessage() + JSON.stringify(newsPostJSON))
 });
 
+/* DELETE delete record */
+router.delete('/:uid', function(req, res, next) {
+
+  res.send(Msg.getDeleteMessage() + 'ID:' + req.params.uid)
+});
+
 module.exports = router;
