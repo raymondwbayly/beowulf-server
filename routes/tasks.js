@@ -38,4 +38,23 @@ router.post('/', function(req, res, next) {
   res.send(Msg.getSavedMessage() + JSON.stringify(taskPostJSON))
 });
 
+/* PUT UPDATE RECORD */
+router.put('/', function(req, res, next) {
+  var id = req.body.id;
+  var author = req.body.author;
+  var authorid = req.body.authorid;
+  var assignee = req.body.assignee;
+  var assigneeid = req.body.assigneeid;
+  var title = req.body.title;
+  var task = req.body.task;
+  var status = req.body.status;
+  var create = req.body.create;
+  var complete = req.body.complete;
+  var token = req.body.token;
+
+  var taskPostJSON = {"id":id,"author":author,"author-id":authorid, "assignee":assignee, "assignee-id":assigneeid, "title":title, "body":task, "status":status, "date-create":create, "date-complete":complete}
+
+  res.send(Msg.getUpdatedMessage() + JSON.stringify(taskPostJSON))
+});
+
 module.exports = router;

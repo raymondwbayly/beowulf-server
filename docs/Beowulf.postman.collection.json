@@ -1356,6 +1356,18 @@
 						"description": "This adds a task to the system"
 					},
 					"response": []
+				},
+				{
+					"name": "Update Tasks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						},
+						"description": "This is the call that updates the task"
+					},
+					"response": []
 				}
 			],
 			"protocolProfileBehavior": {}
