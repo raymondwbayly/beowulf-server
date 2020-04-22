@@ -135,3 +135,8 @@ These are the task and version notes for the application,  they are filled out d
 
 - Adds a task to the system
 - Updated POSTMAN with the call
+
+## Feature 42 Task (Add a task)
+
+- Updates a task on the system
+- Updated POSTMAN with the call
