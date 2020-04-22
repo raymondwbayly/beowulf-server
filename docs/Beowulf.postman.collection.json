@@ -1360,12 +1360,134 @@
 				{
 					"name": "Update Tasks",
 					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "2",
+									"description": "ID of the task",
+									"type": "text"
+								},
+								{
+									"key": "author",
+									"value": "Ray Bayly",
+									"description": "name of the creator",
+									"type": "text"
+								},
+								{
+									"key": "authorid",
+									"value": "2",
+									"description": "ID of the creator",
+									"type": "text"
+								},
+								{
+									"key": "assignee",
+									"value": "Bob Draper",
+									"description": "Name of the task assigne",
+									"type": "text"
+								},
+								{
+									"key": "assigneeid",
+									"value": "4",
+									"description": "ID of the ID",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "This is the title of the task",
+									"description": "This is the title",
+									"type": "text"
+								},
+								{
+									"key": "task",
+									"value": "This is the body of the task",
+									"description": "tasks body",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "new",
+									"description": "Status of the task",
+									"type": "text"
+								},
+								{
+									"key": "create",
+									"value": "01.01.2020",
+									"description": "Date created",
+									"type": "text"
+								},
+								{
+									"key": "complete",
+									"value": "03.01.2020",
+									"description": "Completed",
+									"type": "text"
+								},
+								{
+									"key": "token",
+									"value": "78676sds98d",
+									"description": "Auth Token",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/tasks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks"
+							]
+						},
+						"description": "This is the call that updates the task"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Task",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/tasks/32",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks",
+								"32"
+							]
+						},
+						"description": "This deletes the task from the server"
+					},
+					"response": []
+				},
+				{
+					"name": "Complete Task",
+					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": ""
+							"raw": "http://localhost:3000/tasks/complete/23",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks",
+								"complete",
+								"23"
+							]
 						},
-						"description": "This is the call that updates the task"
+						"description": "This is the complete task"
 					},
 					"response": []
 				}

@@ -124,6 +124,8 @@ Once the server is installed, open a terminal window and to go the folder where 
 |```/tasks```                   |  GET   | LIST      |  List of Users Tasks          |
 |```/tasks```                   |  POST  | STRING    |  Add a task to server         |
 |```/tasks```                   |  PUT   | STRING    |  Update task on server        |
+|```/tasks/32```                | DELETE | STRING    |  Delete task on server        |
+|```/tasks/complete/23```       |  GET   | STRING    |  Update task as complete      |
 |```/tasks/{uid}```             |  GET   | ITEM      |  A task                       |
 |   CONFIG CALLS                                                                     |
 |```/cfg```                     |  GET   | LIST      |  Application Settings (JSON)  |

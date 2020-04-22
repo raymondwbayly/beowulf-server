@@ -140,3 +140,9 @@ These are the task and version notes for the application,  they are filled out d
 
 - Updates a task on the system
 - Updated POSTMAN with the call
+
+## Feature 43/44 Task (Add a task)
+
+- Update task as complete
+- Delete Task from server
+- Updated POSTMAN with the call

@@ -57,4 +57,15 @@ router.put('/', function(req, res, next) {
   res.send(Msg.getUpdatedMessage() + JSON.stringify(taskPostJSON))
 });
 
+/* DELETE delete record */
+router.delete('/:uid', function(req, res, next) {
+
+  res.send(Msg.getDeleteMessage() + 'ID:' + req.params.uid)
+});
+
+/* GET task Object JSON return. */
+router.get('/complete/:uid', function(req, res, next) {
+  res.send('Task Marked as Complete');
+});
+
 module.exports = router;
