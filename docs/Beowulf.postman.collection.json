@@ -1212,6 +1212,27 @@
 						"description": "This returns the version notes from the server. this is the general version notes. "
 					},
 					"response": []
+				},
+				{
+					"name": "Check Cookies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/cfg/checkcookies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cfg",
+								"checkcookies"
+							]
+						},
+						"description": "This sends the check cookie command, but the data for security reasons will show up on the console"
+					},
+					"response": []
 				}
 			],
 			"protocolProfileBehavior": {}
