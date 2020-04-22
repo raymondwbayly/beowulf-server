@@ -1063,6 +1063,73 @@
 						"description": "This returns a single news story from the server. "
 					},
 					"response": []
+				},
+				{
+					"name": "Add News Story",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "author",
+									"value": "Raymond Bayly",
+									"description": "Author of the Story",
+									"type": "text"
+								},
+								{
+									"key": "authorid",
+									"value": "1",
+									"description": "The ID of the author",
+									"type": "text"
+								},
+								{
+									"key": "date",
+									"value": "01/12/2020",
+									"description": "DAte of the Story",
+									"type": "text"
+								},
+								{
+									"key": "media",
+									"value": "https://github.com/raymondwbayly/beowulf-assets/blob/master/img/pub/news-pic-4.png?raw=true\"",
+									"description": "The picture for the story",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "This is the news story new to the server",
+									"description": "Title of the story",
+									"type": "text"
+								},
+								{
+									"key": "story",
+									"value": "This is the story for the server, this is where the body of teh story goes. ",
+									"description": "Story body",
+									"type": "text"
+								},
+								{
+									"key": "token",
+									"value": "3453ferf34r34",
+									"description": "Authorization Token. ",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/news",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"news"
+							]
+						},
+						"description": "This adds a news story to the server"
+					},
+					"response": []
 				}
 			],
 			"protocolProfileBehavior": {}

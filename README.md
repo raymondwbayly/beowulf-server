@@ -117,6 +117,7 @@ Once the server is installed, open a terminal window and to go the folder where 
 |   NEWS CALLS                                                                       |
 |```/news```                    |  GET   | LIST      |  List of News Stories         |
 |```/news/{uid}```              |  GET   | ITEM      |  Specific news Story          |
+|```/news```                    | POST   | LIST      |  Add News Story               |
 |   TASK CALLS                                                                       |
 |```/tasks```                   |  GET   | LIST      |  List of Users Tasks          |
 |```/tasks/{uid}```             |  GET   | ITEM      |  A task                       |
