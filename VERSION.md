@@ -100,12 +100,18 @@ These are the task and version notes for the application,  they are filled out d
 - Created the ability to simulate a delete
 - Updated POSTMAN with the call
 
-## Feature 35 Alerts (Adds Calendar Event)
+## Feature 35 Calendar (Adds Calendar Event)
 
 - Created the ability to simulate an event add
 - Updated POSTMAN with the call
 
-## Feature 36 Alerts (Adds Calendar Event)
+## Feature 36 Calendar (Adds Calendar Event)
 
 - Created the ability to simulate an event update
+- Updated POSTMAN with the call
+
+## Feature 37 Calendar (Delete/Complete Calendar Event)
+
+- Created the delete service on the events under calendar
+- added the ability to complete an event to the calendar service
 - Updated POSTMAN with the call

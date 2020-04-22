@@ -680,6 +680,51 @@
 								"description": "This creates the call to update the event. "
 							},
 							"response": []
+						},
+						{
+							"name": "Delete Event",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/calendar/event/12",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"calendar",
+										"event",
+										"12"
+									]
+								},
+								"description": "This deletes the event (Simulation)"
+							},
+							"response": []
+						},
+						{
+							"name": "Complete Event",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/calendar/event/complete/32",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"calendar",
+										"event",
+										"complete",
+										"32"
+									]
+								},
+								"description": "This completes the event. "
+							},
+							"response": []
 						}
 					],
 					"description": "These are the event calls for the calendar. ",
