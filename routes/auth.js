@@ -17,6 +17,7 @@ router.post('/', function(req, res) {
 
   if (token === '2234FFR1RRDF'){
     rtString = Msg.getAuthorized() + ' with Token ' + token + '  Application ID: ' + user_id + '  and Location of ' + geo;
+    res.cookie('app-token', token).send('App Token cookie set' + '\n' + rtString);
 
   } else {
     rtString = Msg.getUnAuthorized() + ' the token ' + token + ' Was not in our system';
@@ -31,7 +32,7 @@ router.post('/user', function(req, res) {
   var pass = req.body.password;
 
   if(token === '2234FFR1RRDF'){
-    res.send(Records.getSingleRecord(userObj.users,4));
+    res.cookie('user-token', token).send('User Token cookie set' + '\n' + JSON.stringify(Records.getSingleRecord(userObj.users,4)));
   } else {
     res.send({"message":Msg.getUnAuthorized() , "user":user_id, "location":geo, "Token":token, "Password":pass});
   }
