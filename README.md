@@ -117,8 +117,9 @@ Once the server is installed, open a terminal window and to go the folder where 
 |   NEWS CALLS                                                                       |
 |```/news```                    |  GET   | LIST      |  List of News Stories         |
 |```/news/{uid}```              |  GET   | ITEM      |  Specific news Story          |
-|```/news```                    | POST   | STRING    |  Add News Story               |
-|```/news```                    | PUT    | STRING    |  Update News Story            |
+|```/news```                    |  POST  | STRING    |  Add News Story               |
+|```/news```                    |  PUT   | STRING    |  Update News Story            |
+|```/news/{uid}```              | DELETE | STRING    |  Delete Story from server     |
 |   TASK CALLS                                                                       |
 |```/tasks```                   |  GET   | LIST      |  List of Users Tasks          |
 |```/tasks/{uid}```             |  GET   | ITEM      |  A task                       |

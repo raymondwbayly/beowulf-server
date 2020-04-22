@@ -1203,6 +1203,27 @@
 						"description": "This updates the news story on the server"
 					},
 					"response": []
+				},
+				{
+					"name": "Delete News",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/news/23",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"news",
+								"23"
+							]
+						},
+						"description": "This allows you to delete a news story from the server"
+					},
+					"response": []
 				}
 			],
 			"protocolProfileBehavior": {}
