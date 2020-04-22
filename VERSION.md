@@ -115,3 +115,8 @@ These are the task and version notes for the application,  they are filled out d
 - Created the delete service on the events under calendar
 - added the ability to complete an event to the calendar service
 - Updated POSTMAN with the call
+
+## Feature 38 News (Adds News Event)
+
+- Created the ability to simulate adding news to the server
+- Updated POSTMAN with the call
