@@ -151,3 +151,8 @@ These are the task and version notes for the application,  they are filled out d
 
 - Add ability to add a user to the server
 - Updated POSTMAN with the call
+
+## Feature 46 Task (Update a User)
+
+- Add ability to Update a user to the server
+- Updated POSTMAN with the call

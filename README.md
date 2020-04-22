@@ -102,6 +102,7 @@ Once the server is installed, open a terminal window and to go the folder where 
 |   USER CALLS                                                                       |
 |```/users```                   |  GET   | LIST      |  Lists Users                  |
 |```/users```                   |  POST  | STRING    |  Add User                     |
+|```/users```                   |  PUT   | STRING    |  Update User                  |
 |```/users/{uid}```             |  GET   | ITEM      |  Displays a single User       |
 |   CALENDAR CALLS                                                                   |
 |```/calendar```                |  GET   | LIST      |  Lists the days events        |
