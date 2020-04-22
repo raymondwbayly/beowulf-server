@@ -101,6 +101,7 @@ Once the server is installed, open a terminal window and to go the folder where 
 |```/auth/user```               |  POST  | AUTH USER |  Authorizes user on server    |
 |   USER CALLS                                                                       |
 |```/users```                   |  GET   | LIST      |  Lists Users                  |
+|```/users```                   |  POST  | STRING    |  Add User                     |
 |```/users/{uid}```             |  GET   | ITEM      |  Displays a single User       |
 |   CALENDAR CALLS                                                                   |
 |```/calendar```                |  GET   | LIST      |  Lists the days events        |
