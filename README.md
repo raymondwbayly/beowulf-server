@@ -103,6 +103,8 @@ Once the server is installed, open a terminal window and to go the folder where 
 |```/users```                   |  GET   | LIST      |  Lists Users                  |
 |```/users```                   |  POST  | STRING    |  Add User                     |
 |```/users```                   |  PUT   | STRING    |  Update User                  |
+|```/users/{uid}```             | DELETE | STRING    |  Deletes a user               |
+|```/users/deactivate/{uid}```  |  GET   | STRING    |  Deactivates user             |
 |```/users/{uid}```             |  GET   | ITEM      |  Displays a single User       |
 |   CALENDAR CALLS                                                                   |
 |```/calendar```                |  GET   | LIST      |  Lists the days events        |
