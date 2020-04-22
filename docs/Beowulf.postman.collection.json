@@ -223,6 +223,86 @@
 						"description": "This is the add user call to the server. "
 					},
 					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "firstname",
+									"value": "Ray",
+									"description": "First name of the user",
+									"type": "text"
+								},
+								{
+									"key": "lastname",
+									"value": "Bayly",
+									"description": "Last Name of the user",
+									"type": "text"
+								},
+								{
+									"key": "date",
+									"value": "01.01.2020",
+									"description": "Date user created",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "rbayly@company.com",
+									"description": "Email of the user",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "800.222.1234",
+									"description": "Users Phone Number",
+									"type": "text"
+								},
+								{
+									"key": "mobile",
+									"value": "704.111.1234",
+									"description": "Mobile Phone of the User",
+									"type": "text"
+								},
+								{
+									"key": "profile",
+									"value": "https://github.com/raymondwbayly/beowulf-assets/blob/master/img/pub/user-profile.jpeg?raw=true",
+									"description": "Users Picture",
+									"type": "text"
+								},
+								{
+									"key": "token",
+									"value": "juyhguy76uh",
+									"description": "Auth Token",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "1",
+									"description": "The id of the user",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								""
+							]
+						},
+						"description": "This is the update user call"
+					},
+					"response": []
 				}
 			],
 			"protocolProfileBehavior": {}

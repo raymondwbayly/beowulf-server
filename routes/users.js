@@ -36,4 +36,21 @@ router.post('/', function(req, res, next) {
   res.send(Msg.getSavedMessage() + JSON.stringify(userPostJSON))
 });
 
+/* PUT UPDATE RECORD */
+router.put('/', function(req, res, next) {
+  var id = req.body.id;
+  var firstname = req.body.firstname;
+  var lastname = req.body.lastname;
+  var date = req.body.date;
+  var email = req.body.email;
+  var phone = req.body.phone;
+  var mobile = req.body.mobile;
+  var profile = req.body.profile;
+  var token = req.body.token;
+
+  var userPostJSON = {"id":id, "firstname": firstname, "lastname":lastname, "date":date, "email":email, "phone":phone, "mobile":mobile , "profile":profile}
+
+  res.send(Msg.getUpdatedMessage() + JSON.stringify(userPostJSON))
+});
+
 module.exports = router;
