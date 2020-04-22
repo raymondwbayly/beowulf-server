@@ -85,6 +85,16 @@ router.put('/event', function(req, res, next) {
   res.send(Msg.getUpdatedMessage() + JSON.stringify(eventPostJSON))
 });
 
+/* DELETE delete record */
+router.delete('/event/:uid', function(req, res, next) {
+
+  res.send(Msg.getDeleteMessage() + 'ID:' + req.params.uid)
+});
+
+/* GET Returns the event. */
+router.get('/event/complete/:uid', function(req, res, next) {
+  res.send('event completed');
+});
 
 // DAY CALLS *****************************************************************************************
 
