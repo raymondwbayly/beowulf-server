@@ -104,3 +104,8 @@ These are the task and version notes for the application,  they are filled out d
 
 - Created the ability to simulate an event add
 - Updated POSTMAN with the call
+
+## Feature 36 Alerts (Adds Calendar Event)
+
+- Created the ability to simulate an event update
+- Updated POSTMAN with the call
