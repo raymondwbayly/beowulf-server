@@ -1271,6 +1271,91 @@
 						"description": "This returns a single task"
 					},
 					"response": []
+				},
+				{
+					"name": "Add Task",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "author",
+									"value": "Raymond Bayly",
+									"description": "Author of the task",
+									"type": "text"
+								},
+								{
+									"key": "authorid",
+									"value": "3",
+									"description": "The ID of the author",
+									"type": "text"
+								},
+								{
+									"key": "assignee",
+									"value": "John smith",
+									"description": "The person assigned to ",
+									"type": "text"
+								},
+								{
+									"key": "assigneeid",
+									"value": "4",
+									"description": "ID of teh assignee",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "This is the task fo the title",
+									"description": "This is teh title",
+									"type": "text"
+								},
+								{
+									"key": "task",
+									"value": "This is the details of the task, this is where the full information on the task will go",
+									"description": "This is the task details",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "news",
+									"description": "Status of the task",
+									"type": "text"
+								},
+								{
+									"key": "create",
+									"value": "04/10/2020",
+									"description": "Date created",
+									"type": "text"
+								},
+								{
+									"key": "complete",
+									"value": "04/12/2020",
+									"description": "Date to complete",
+									"type": "text"
+								},
+								{
+									"key": "token",
+									"value": "eferfd34534d",
+									"description": "Auth Token",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/tasks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks"
+							]
+						},
+						"description": "This adds a task to the system"
+					},
+					"response": []
 				}
 			],
 			"protocolProfileBehavior": {}

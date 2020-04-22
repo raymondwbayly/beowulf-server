@@ -122,6 +122,7 @@ Once the server is installed, open a terminal window and to go the folder where 
 |```/news/{uid}```              | DELETE | STRING    |  Delete Story from server     |
 |   TASK CALLS                                                                       |
 |```/tasks```                   |  GET   | LIST      |  List of Users Tasks          |
+|```/tasks```                   |  POST  | STRING    |  Add a task to server         |
 |```/tasks/{uid}```             |  GET   | ITEM      |  A task                       |
 |   CONFIG CALLS                                                                     |
 |```/cfg```                     |  GET   | LIST      |  Application Settings (JSON)  |

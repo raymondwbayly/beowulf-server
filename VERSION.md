@@ -130,3 +130,8 @@ These are the task and version notes for the application,  they are filled out d
 
 - Setup the ability to delete a news story
 - Updated POSTMAN with the call
+
+## Feature 41 Task (Add a task)
+
+- Adds a task to the system
+- Updated POSTMAN with the call
