@@ -9,4 +9,9 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: Cfg.getTitle(), version: Cfg.getVersion(), copyright: Cfg.getCopyright() });
 });
 
+/* GET Postmn page. */
+router.get('/postman', function(req, res, next) {
+  res.render('postman', { title: Cfg.getTitle(), version: Cfg.getVersion(), copyright: Cfg.getCopyright() });
+});
+
 module.exports = router;

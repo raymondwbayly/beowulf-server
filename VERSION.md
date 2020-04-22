@@ -162,3 +162,8 @@ These are the task and version notes for the application,  they are filled out d
 - Add ability to delete user from the server
 - aded the ability to deactivate a user on the server
 - Updated POSTMAN with the call
+
+## Feature 67 Task (Update a User)
+
+- AAdded the POSTMAN view to the default stack of web views
+- Updated the index view with the link for the postman view
