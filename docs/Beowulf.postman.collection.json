@@ -356,7 +356,7 @@
 					"name": "Event",
 					"item": [
 						{
-							"name": "Calendar Get Specific Event",
+							"name": "Get Event",
 							"request": {
 								"method": "GET",
 								"header": [],
@@ -374,6 +374,310 @@
 									]
 								},
 								"description": "This gets a specific event"
+							},
+							"response": []
+						},
+						{
+							"name": "Add Event",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "token",
+											"value": "sdfgdgedr9898",
+											"description": "The Authorization Token",
+											"type": "text"
+										},
+										{
+											"key": "id",
+											"value": "12",
+											"description": "ID of the Event",
+											"type": "text"
+										},
+										{
+											"key": "user",
+											"value": "1",
+											"description": "teh ID of the user who created the event",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Raymond Bayly",
+											"description": "The name of the person who has the event",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "jsmith@company.com",
+											"description": "This is the email of the person ",
+											"type": "text"
+										},
+										{
+											"key": "location",
+											"value": "Charlotte, NC",
+											"description": "Location of the Event",
+											"type": "text"
+										},
+										{
+											"key": "duration",
+											"value": "30 Minutes",
+											"description": "Duration of event",
+											"type": "text"
+										},
+										{
+											"key": "starttime",
+											"value": "8:30 AM",
+											"description": "Time event starts",
+											"type": "text"
+										},
+										{
+											"key": "startdate",
+											"value": "4.12.2020",
+											"description": "Date of the event start",
+											"type": "text"
+										},
+										{
+											"key": "endtime",
+											"value": "9:00 AM",
+											"description": "Time event ends",
+											"type": "text"
+										},
+										{
+											"key": "enddate",
+											"value": "4.12.2020",
+											"description": "Date Event Ends",
+											"type": "text"
+										},
+										{
+											"key": "subject",
+											"value": "This is a test event for the system",
+											"description": "Title of tibject of the event",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "This is the event description for teh system",
+											"description": "This is the description of the event",
+											"type": "text"
+										},
+										{
+											"key": "aid1",
+											"value": "3",
+											"description": "ID of an attendee",
+											"type": "text"
+										},
+										{
+											"key": "afn1",
+											"value": "John",
+											"description": "The name of the atendee",
+											"type": "text"
+										},
+										{
+											"key": "aln1",
+											"value": "Smith",
+											"description": "The last name of the attendee",
+											"type": "text"
+										},
+										{
+											"key": "aem1",
+											"value": "jsmith@company.com",
+											"description": "This is the email of the attendee",
+											"type": "text"
+										},
+										{
+											"key": "aid2",
+											"value": "4",
+											"description": "This is an id for the attendee",
+											"type": "text"
+										},
+										{
+											"key": "afn2",
+											"value": "Skip",
+											"description": "This is the first name of the attendee",
+											"type": "text"
+										},
+										{
+											"key": "aln2",
+											"value": "Jenkins",
+											"description": "This is the last name of an attendee",
+											"type": "text"
+										},
+										{
+											"key": "aem2",
+											"value": "klisp@company.com",
+											"description": "Email of teh Attendee",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/calendar/event",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"calendar",
+										"event"
+									]
+								},
+								"description": "Adds Event to the system (Simulated)"
+							},
+							"response": []
+						},
+						{
+							"name": "Update Event",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "token",
+											"value": "weferge989",
+											"description": "Auth Token",
+											"type": "text"
+										},
+										{
+											"key": "id",
+											"value": "1",
+											"description": "The id of the Auth you are updating",
+											"type": "text"
+										},
+										{
+											"key": "user",
+											"value": "3",
+											"description": "The user ID for the owner of event",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Raymond Bayly",
+											"description": "Name of the person its assigned to",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "jsmith@company.com",
+											"description": "The email of teh person",
+											"type": "text"
+										},
+										{
+											"key": "location",
+											"value": "Charlotte, NC",
+											"description": "Location of the Event",
+											"type": "text"
+										},
+										{
+											"key": "duration",
+											"value": "30 Minutes",
+											"description": "Duration of the event",
+											"type": "text"
+										},
+										{
+											"key": "startdate",
+											"value": "02.15.2020",
+											"description": "Start of the event",
+											"type": "text"
+										},
+										{
+											"key": "starttime",
+											"value": "9:00 AM",
+											"description": "This is the start time",
+											"type": "text"
+										},
+										{
+											"key": "enddate",
+											"value": "2.15.2020",
+											"description": "This is the end date",
+											"type": "text"
+										},
+										{
+											"key": "endtime",
+											"value": "9:30 AM",
+											"description": "This is the end time",
+											"type": "text"
+										},
+										{
+											"key": "subject",
+											"value": "This is the event to update",
+											"description": "This is the subject or title of the event",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "This is the event updated, this is the body of the event",
+											"description": "This is the body of the vent ",
+											"type": "text"
+										},
+										{
+											"key": "aid1",
+											"value": "1",
+											"description": "User id of Attendee",
+											"type": "text"
+										},
+										{
+											"key": "adfn1",
+											"value": "Chris",
+											"description": "First name of the attendee",
+											"type": "text"
+										},
+										{
+											"key": "adln1",
+											"value": "Johnson",
+											"description": "Last name of the person",
+											"type": "text"
+										},
+										{
+											"key": "aem1",
+											"value": "cjohnson@company.com",
+											"description": "This is the atendees email",
+											"type": "text"
+										},
+										{
+											"key": "aid2",
+											"value": "4",
+											"description": "ID of attendee",
+											"type": "text"
+										},
+										{
+											"key": "afn2",
+											"value": "Barry",
+											"description": "First name of attendee",
+											"type": "text"
+										},
+										{
+											"key": "aln2",
+											"value": "Gordy",
+											"description": "Last name of attendee",
+											"type": "text"
+										},
+										{
+											"key": "aem2",
+											"value": "bgordy@company.com",
+											"description": "Company email for attendee",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/calendar/event",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"calendar",
+										"event"
+									]
+								},
+								"description": "This creates the call to update the event. "
 							},
 							"response": []
 						}

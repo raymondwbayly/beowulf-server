@@ -57,6 +57,34 @@ router.post('/event', function(req, res, next) {
   res.send(Msg.getSavedMessage() + JSON.stringify(eventPostJSON))
 });
 
+/* PUT UPDATE RECORD */
+router.put('/event', function(req, res, next) {
+  var token = req.body.token;
+  var id = req.body.id;
+  var user = req.body.user;
+  var name = req.body.name;
+  var email = req.body.email;
+  var location = req.body.location;
+  var duration = req.body.duration;
+  var startdate = req.body.startdate;
+  var starttime = req.body.starttime;
+  var enddate = req.body.enddate;
+  var endtime = req.body.endtime;
+  var subject = req.body.subject;
+  var description = req.body.description;
+  var attendee1id = req.body.aid1;
+  var attendee1fn = req.body.afn1;
+  var attendee1ln = req.body.aln1;
+  var attendee1em = req.body.aem1;
+  var attendee2id = req.body.aid2;
+  var attendee2fn = req.body.afn2;
+  var attendee2ln = req.body.aln2;
+  var attendee2em = req.body.aem2;
+  var eventPostJSON = {"id": id,"user": user,"name": name,"email": email,"location": location,"Duration": duration,"start-date": startdate,"start-time": starttime,"end-date": enddate,"end-time": endtime,"subject": subject,"body": description,"attendees": [{"id": attendee1id,"firstname": attendee1fn,"lastname": attendee1ln,"email": attendee1em},{"id": attendee2id,"firstname": attendee2fn,"lastname": attendee2ln,"email": attendee2em}]}
+
+  res.send(Msg.getUpdatedMessage() + JSON.stringify(eventPostJSON))
+});
+
 
 // DAY CALLS *****************************************************************************************
 
