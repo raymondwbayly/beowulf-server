@@ -159,6 +159,13 @@ This is the mock data section, this explains the mock data server setup.
 
 ---
 
+## Views
+
+- Default Server View (```/```)
+- POSTMAN setup View (```/postman```)
+
+---
+
 ## License
 
 MIT

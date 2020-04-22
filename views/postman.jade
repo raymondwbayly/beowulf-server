@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  img(src="images/beowulf-node-server-banner-2.png")
+  br
+  p
+    img(src="images/postman_banner.png")
+  br
+  hr
+  br
+  <a href="/">Home</a> / Postman
+  br
+  h1 Welcome to #{title}
+  H1 Postman instructions
+  H3 Version: #{version}
+  p Postman is an application that allows you to run server calls and test them , showing you cookies and returns as well as 
+  p other information you can find helpful to test server calls 
+  p during development, I kept the test collection up to date and made it available in this project
+  p It is located in the docs/ folder and it is a Version 2 JSON collection
+  p To use it simply download the latest version of <a href="https://www.postman.com/downloads/">POSTMAN</a>.
+  p 
+  p once it is downloaded, simply import the collection located in the project at <b>{project root}/docs/Beowulf.postman.collection.json</b>
+  br
+  br
+  br
+  hr
+  br
+  br
+  p #{copyright}
