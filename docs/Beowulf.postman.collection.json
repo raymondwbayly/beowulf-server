@@ -1130,6 +1130,79 @@
 						"description": "This adds a news story to the server"
 					},
 					"response": []
+				},
+				{
+					"name": "Updated News Story",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "3",
+									"description": "The ID of the story",
+									"type": "text"
+								},
+								{
+									"key": "author",
+									"value": "Raymond Bayly",
+									"description": "Author",
+									"type": "text"
+								},
+								{
+									"key": "authorid",
+									"value": "2",
+									"description": "The ID of the author",
+									"type": "text"
+								},
+								{
+									"key": "date",
+									"value": "04/01/2020",
+									"description": "Date of the story",
+									"type": "text"
+								},
+								{
+									"key": "media",
+									"value": "https://github.com/raymondwbayly/beowulf-assets/blob/master/img/pub/news-pic-3.png?raw=true\"",
+									"description": "Picture for the news story",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "This is the title of the story bieng updated",
+									"description": "This is the title",
+									"type": "text"
+								},
+								{
+									"key": "story",
+									"value": "This is the body of teh story that we are updating , this story will be saved to the server well at least as a simulation",
+									"description": "This is the story",
+									"type": "text"
+								},
+								{
+									"key": "token",
+									"value": "87878deer76",
+									"description": "Thks is the auth token for teh session",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/news",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"news"
+							]
+						},
+						"description": "This updates the news story on the server"
+					},
+					"response": []
 				}
 			],
 			"protocolProfileBehavior": {}

@@ -34,4 +34,18 @@ router.post('/', function(req, res, next) {
   res.send(Msg.getSavedMessage() + JSON.stringify(newsPostJSON))
 });
 
+/* PUT UPDATE RECORD */
+router.put('/', function(req, res, next) {
+  var id = req.body.id;
+  var author = req.body.author;
+  var authorid = req.body.authorid;
+  var date = req.body.date;
+  var media = req.body.media;
+  var title = req.body.title;
+  var story = req.body.story;
+  var token = req.body.token;
+  var newsPostJSON = {'id':id,'author': author, 'authorid': authorid, 'date': date, 'media': media, 'title': title, 'story': story, 'token': token}
+  res.send(Msg.getUpdatedMessage() + JSON.stringify(newsPostJSON))
+});
+
 module.exports = router;

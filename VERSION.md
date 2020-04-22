@@ -120,3 +120,8 @@ These are the task and version notes for the application,  they are filled out d
 
 - Created the ability to simulate adding news to the server
 - Updated POSTMAN with the call
+
+## Feature 39 News (Update News Event)
+
+- Setup the ability to save  news story on the server
+- Updated POSTMAN with the call
