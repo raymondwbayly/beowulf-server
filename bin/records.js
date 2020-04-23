@@ -15,7 +15,7 @@ const buildRecord = (obj,num) => {
 // Returns the country based on the ITU designation
 const getCountry = (object, value) => {
     var filteredObj = object.find(function(item, i){
-        if(item.ITU === value){
+        if(item.ISO3166 === value){
           return i;
         }
     });

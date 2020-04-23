@@ -1839,6 +1839,76 @@
 			"protocolProfileBehavior": {}
 		},
 		{
+			"name": "Geo",
+			"item": [
+				{
+					"name": "Geo Default",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/geo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"geo"
+							]
+						},
+						"description": "This is the geo default. "
+					},
+					"response": []
+				},
+				{
+					"name": "List Countries",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/geo/countries",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"geo",
+								"countries"
+							]
+						},
+						"description": "This lists the details of a country"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Country",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/geo/country/AF",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"geo",
+								"country",
+								"AF"
+							]
+						},
+						"description": "This returns a single country based on abbreviation"
+					},
+					"response": []
+				}
+			],
+			"description": "This is the geographic endpoint for the geo tools",
+			"protocolProfileBehavior": {}
+		},
+		{
 			"name": "Welcome",
 			"request": {
 				"method": "GET",
