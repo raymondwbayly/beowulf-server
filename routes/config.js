@@ -15,6 +15,12 @@ router.get('/', function(req, res, next) {
   res.send(cfgObj);
 });
 
+router.get('/cookie', function(req, res, next) {
+  var ckie = req.cookies;
+      console.log(ckie);
+  res.send(ckie);
+});
+
 /* GET  version. */
 router.get('/version', function(req, res, next) {
   res.send(cfgObj.version);

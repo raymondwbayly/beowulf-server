@@ -4,6 +4,7 @@ var path = require('path');
 var fs = require('fs');
 var Records = require('../bin/records');
 var Msg = require('../bin/messages');
+var Sec = require('../bin/security');
 
 // Users File for the static data
 var usersJSON = path.join(__dirname, '../lib', 'users.json');
@@ -11,8 +12,12 @@ var userObj =  require(usersJSON);
 
 /* GET Users listing. */
 router.get('/', function(req, res, next) {
-  var readable = fs.createReadStream(usersJSON);
-  readable.pipe(res);
+  if(Sec.checkCookies(req.cookies).status){
+    var readable = fs.createReadStream(usersJSON);
+    readable.pipe(res);
+  } else {
+    res.send(Sec.checkCookies(req.cookies).message);
+  }
 });
 
 /* GET Config Object JSON return. */
@@ -31,9 +36,13 @@ router.post('/', function(req, res, next) {
   var profile = req.body.profile;
   var token = req.body.token;
 
-  var userPostJSON = {"firstname": firstname, "lastname":lastname, "date":date, "email":email, "phone":phone, "mobile":mobile , "profile":profile}
+  if(Sec.checkCookies(req.cookies).status){
+    var userPostJSON = {"firstname": firstname, "lastname":lastname, "date":date, "email":email, "phone":phone, "mobile":mobile , "profile":profile}
+    res.send(Msg.getSavedMessage() + JSON.stringify(userPostJSON))
+  } else {
+    res.send(Sec.checkCookies(req.cookies).message);
+  }
 
-  res.send(Msg.getSavedMessage() + JSON.stringify(userPostJSON))
 });
 
 /* PUT UPDATE RECORD */
@@ -48,20 +57,33 @@ router.put('/', function(req, res, next) {
   var profile = req.body.profile;
   var token = req.body.token;
 
-  var userPostJSON = {"id":id, "firstname": firstname, "lastname":lastname, "date":date, "email":email, "phone":phone, "mobile":mobile , "profile":profile}
-
-  res.send(Msg.getUpdatedMessage() + JSON.stringify(userPostJSON))
+  if(Sec.checkCookies(req.cookies).status){
+    var userPostJSON = {"id":id, "firstname": firstname, "lastname":lastname, "date":date, "email":email, "phone":phone, "mobile":mobile , "profile":profile}
+    res.send(Msg.getUpdatedMessage() + JSON.stringify(userPostJSON))
+  } else {
+    res.send(Sec.checkCookies(req.cookies).message);
+  }
 });
 
 /* DELETE delete record */
 router.delete('/:uid', function(req, res, next) {
 
-  res.send(Msg.getDeleteMessage() + 'ID:' + req.params.uid)
+  if(Sec.checkCookies(req.cookies).status){
+    res.send(Msg.getDeleteMessage() + 'ID:' + req.params.uid)
+  } else {
+    res.send(Sec.checkCookies(req.cookies).message);
+  }
+
 });
 
 /* GET Config Object JSON return. */
 router.get('/deactivate/:uid', function(req, res, next) {
-  res.send('User has been deactivated on the server');
+  
+  if(Sec.checkCookies(req.cookies).status){
+    res.send('User has been deactivated on the server');
+  } else {
+    res.send(Sec.checkCookies(req.cookies).message);
+  }
 });
 
 module.exports = router;

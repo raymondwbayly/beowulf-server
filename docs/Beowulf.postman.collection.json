@@ -1219,7 +1219,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/cfg/checkcookies",
+							"raw": "http://localhost:3000/cfg/cookie",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1227,7 +1227,7 @@
 							"port": "3000",
 							"path": [
 								"cfg",
-								"checkcookies"
+								"cookie"
 							]
 						},
 						"description": "This sends the check cookie command, but the data for security reasons will show up on the console"

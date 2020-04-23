@@ -16,6 +16,12 @@ const getCopyright = () => {
     return configJSON.copyright;
 }
 
+const checkCookies = (cookies) => {
+    // This checks to ensure the app and user cookies are set
+    console.log(cookies);
+    var returnVar = {'status': true, 'message':'Cookies are set and returning properly'};
+    return returnVar;
+}
 
 exports.getTitle = getTitle;
 exports.getVersion = getVersion;
