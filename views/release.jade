@@ -1,0 +1,60 @@
+extends layout
+
+block content
+  img(src="images/beowulf-node-server-banner-2.png")
+  br
+  br
+  br
+  <a href="/">Home</a> / Release #{version} Notes
+  br
+  hr
+  br
+  h1 Welcome to #{title}
+  H3 Version: #{version}
+  H3 Release Notes
+  br
+  br
+  br
+  p Welcome to the release notes section of the server, this is put together to give you an idea of the current development
+  p state of the server system and also a little insight into the future of the product.
+  br
+  br
+  h3 Keep Up to date.
+  p browse the latest issues at <a href="https://github.com/raymondwbayly/beowulf-server/issues" target="_blank">Beowulf Server Tickets</a>
+  p or the version notes at <a href="https://github.com/raymondwbayly/beowulf-server/blob/master/VERSION.md" target="_blank">Beowulf Server Version Notes</a>
+  br
+  br
+  h3 Product Version Notes
+  hr
+  br
+  h3 Feature/63 - Addition of Cookies to the server
+  p Server can set and retrieve the user and system tokens which are set on the<br> client side by passing the proper token to the auth uri, this ensures that<br> you are able to maintain a connection with the server.
+  br
+  br
+  h3 Feature/58 - Addition of User service (CRUD) (URI)<i>/user</i>
+  p Setup the ability to interact with the user functions via the /user URI ,<br>  giving the client the ability simulate user addition, subtraction,<br>  updating and reading.
+  br
+  br
+  h3 Feature/54 - Addition of Task service (CRUD) (URI)<i>/task</i>
+  p Setup the ability to interact with the task functions via the /task URI ,<br>  giving the client the ability simulate task addition, subtraction,<br>  updating and reading.
+  br
+  br
+  h3 Feature/52 - Addition of News service (CRUD) (URI)<i>/news</i>
+  p Setup the ability to interact with the news functions via the /user URI ,<br>  giving the client the ability simulate news addition, subtraction,<br>  updating and reading.
+  br
+  br
+  h3 Feature/50 - Addition of calendar service (CRUD) (URI)<i>/calendar</i>
+  p Setup the ability to interact with the calendar functions via the /calendar URI ,<br>  giving the client the ability simulate event addition, subtraction,<br>  updating and reading.
+  br
+  br
+  h3 Feature/58 - Addition of Config service (CRUD) (URI)<i>/cfg</i>
+  p Setup the ability to interact with the config functions via the /cfg URI ,<br>  giving the client the ability simulate config addition, subtraction,<br>  updating and reading.
+  br
+  br
+  h3 Feature/58 - Addition of Alerts service (CRUD) (URI)<i>/alert</i>
+  p Setup the ability to interact with the alert functions via the /alert URI ,<br>  giving the client the ability simulate alert addition, subtraction,<br>  updating and reading.
+  br
+  br
+  hr
+  br
+  p #{copyright}
