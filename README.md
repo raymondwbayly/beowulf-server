@@ -137,6 +137,7 @@ Once the server is installed, open a terminal window and to go the folder where 
 |```/cfg/version/notes```       |  GET   | JSON      |  Returns Version Notes        |
 |```/cfg/version/number```      |  GET   | JSON      |  Returns version number       |
 |```/cfg/support```             |  GET   | JSON      |  REturns Support Info         |
+|```/cfg/cookie```              |  GET   | JSON      |  Checks cookie settings        |
 |   LOOKUP CALLS                                                                     |
 |```/lookup```                  |  GET   | STRING    |  Text return to show working  |
 |```/lookup/timezones```        |  GET   | LIST      |  List of Timezones            |

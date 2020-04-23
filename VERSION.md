@@ -167,3 +167,7 @@ These are the task and version notes for the application,  they are filled out d
 
 - AAdded the POSTMAN view to the default stack of web views
 - Updated the index view with the link for the postman view
+
+## Feature 71 Task (Cookie Security)
+
+- Gives the ability to check and set cookies for users
