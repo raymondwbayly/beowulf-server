@@ -12,6 +12,18 @@ const buildRecord = (obj,num) => {
     return retJSON;
 }
 
+// Returns the country based on the ITU designation
+const getCountry = (object, value) => {
+    var filteredObj = object.find(function(item, i){
+        if(item.ITU === value){
+          return i;
+        }
+    });
+    return filteredObj;
+}
+
+
 
 exports.getSingleRecord = getSingleRecord;
-exports.getSig
+exports.buildRecord = buildRecord;
+exports.getCountry = getCountry;

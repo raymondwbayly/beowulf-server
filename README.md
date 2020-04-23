@@ -137,13 +137,17 @@ Once the server is installed, open a terminal window and to go the folder where 
 |```/cfg/version/notes```       |  GET   | JSON      |  Returns Version Notes        |
 |```/cfg/version/number```      |  GET   | JSON      |  Returns version number       |
 |```/cfg/support```             |  GET   | JSON      |  REturns Support Info         |
-|```/cfg/cookie```              |  GET   | JSON      |  Checks cookie settings        |
+|```/cfg/cookie```              |  GET   | JSON      |  Checks cookie settings       |
 |   LOOKUP CALLS                                                                     |
 |```/lookup```                  |  GET   | STRING    |  Text return to show working  |
 |```/lookup/timezones```        |  GET   | LIST      |  List of Timezones            |
 |```/lookup/timezone/{uid}```   |  GET   | JSON      |  Timezone information         |
 |```/lookup/jobtitles```        |  GET   | LIST      |  List of Job Titles           |
 |```/lookup/jobtitle/{uid}```   |  GET   | JSON      |  Returns Job Title Info       |
+|   GEOGRAPHY CALLS                                                                  |
+|```/geo```                     |  GET   | LIST      |  Default call returns string  |
+|```/geo/countries```           |  GET   | LIST      | Returns list of a country     |
+|```/geo/country{ITU}```        |  GET   | LIST      |  Returns country record       |
 
 ---
 
