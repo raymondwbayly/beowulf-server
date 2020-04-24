@@ -16,4 +16,8 @@ router.get('/countries', function(req, res, next) {
     res.send(Geo.GetCountry(req.params.uid));
   });
 
+  router.get('/country/cities/:uid', function(req, res, next) {
+    res.send(Geo.ListCitiesByCountry(req.params.uid));
+  });
+
 module.exports = router;
