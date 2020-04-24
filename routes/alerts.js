@@ -5,41 +5,31 @@ var fs = require('fs');
 var ejs = require('ejs');
 var Msg = require('../bin/messages');
 var Records = require('../bin/records');
+var jsonEngine = require('../bin/json-engine');
 var MockExpressRequest = require('mock-express-request');
 var MockExpressResponse = require('mock-express-response');
 
 var response = new MockExpressResponse();
-
-// Alerts File for the static data
-var alertsJSON = path.join(__dirname, '../lib', 'alerts.json');
-var alertsObj =  require(alertsJSON);
 
 
 // *********************************** URI ROUTE CALLS ******************************************** //
 
 /* POST CREATE */
 router.post('/', function(req, res, next) {
-  var title = req.body.title;
-  var date = req.body.date;
-  var desc = req.body.description;
-  var author = req.body.author;
-  var email = req.body.email;
-  var token = req.body.token;
 
-  var alertPostJSON = {'title':title, 'date': date, 'description': desc, 'author': author, 'email': email, 'token': token}
-
+  var alertPostJSON = {'title':req.body.title, 'date': req.body.date, 'description': req.body.description, 'author': req.body.author, 'email': req.body.email, 'token': req.body.token}
+  jsonEngine.addRecord('alerts', alertPostJSON);
   res.send(Msg.getSavedMessage() + JSON.stringify(alertPostJSON))
 });
 
-/* GET READ. */
+/* GET LIST ALERTS. */
 router.get('/', function(req, res, next) {
-  var readable = fs.createReadStream(alertsJSON);
-  readable.pipe(res);
+  res.send(jsonEngine.listRecords('alerts'));
 });
 
 /* GET READ SINGLE. */
 router.get('/:uid', function(req, res, next) {
-  res.send(Records.getSingleRecord(alertsObj.alerts,req.params.uid));
+  res.send(jsonEngine.getRecord('alerts', req.params.uid));
 });
 
 /* PUT UPDATE RECORD */
