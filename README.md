@@ -147,7 +147,8 @@ Once the server is installed, open a terminal window and to go the folder where 
 |   GEOGRAPHY CALLS                                                                  |
 |```/geo```                     |  GET   | LIST      |  Default call returns string  |
 |```/geo/countries```           |  GET   | LIST      | Returns list of a country     |
-|```/geo/country{ITU}```        |  GET   | LIST      |  Returns country record       |
+|```/geo/country{ISO}```        |  GET   | LIST      |  Returns country record       |
+|```/geo/country/cities/{ISO}```|  GET   | LIST      |  Cities from a country        |
 
 ---
 

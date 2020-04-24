@@ -177,3 +177,9 @@ These are the task and version notes for the application,  they are filled out d
 ## Feature 71 Task (Cookie Security)
 
 - Gives the ability to check and set cookies for users
+
+## Feature 75 Task (Country Cities)
+
+- Added the ability for the system to return cities of a country
+- passing the ISO two letter code will return the list of cities
+- Upated the POSTMAN calls as well
