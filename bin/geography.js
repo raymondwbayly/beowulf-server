@@ -6,12 +6,20 @@ var Records = require('./records');
 var countriesPathJSON = path.join(__dirname, '../lib/geography', 'countries.json');
 var countryOBJ =  require(countriesPathJSON);
 
+// Read the country files
+var statePathJSON = path.join(__dirname, '../lib/geography', 'states.json');
+var statesOBJ =  require(statePathJSON);
+
 // Read the City Files 
 var citiesPathJSON = path.join(__dirname, '../lib/geography', 'cities.json');
 var citiesOBJ =  require(citiesPathJSON);
 
 const ListCountries = () => {
     return countryOBJ;
+}
+
+const ListStates = () => {
+    return statesOBJ;
 }
 
 const GetCountry = (CT) => {
@@ -27,5 +35,6 @@ const ListCitiesByCountry = (CT) => {
 
 
 exports.ListCountries = ListCountries;
+exports.ListStates = ListStates;
 exports.GetCountry = GetCountry;
 exports.ListCitiesByCountry = ListCitiesByCountry;

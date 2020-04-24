@@ -1926,6 +1926,27 @@
 						"description": "This returns the cities listed for a country, by the country liste. "
 					},
 					"response": []
+				},
+				{
+					"name": "List US States",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/geo/states",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"geo",
+								"states"
+							]
+						},
+						"description": "This is the US states"
+					},
+					"response": []
 				}
 			],
 			"description": "This is the geographic endpoint for the geo tools",

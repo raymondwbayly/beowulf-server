@@ -12,6 +12,10 @@ router.get('/countries', function(req, res, next) {
     res.send(Geo.ListCountries());
   });
 
+  router.get('/states', function(req, res, next) {
+    res.send(Geo.ListStates());
+  });
+
   router.get('/country/:uid', function(req, res, next) {
     res.send(Geo.GetCountry(req.params.uid));
   });
