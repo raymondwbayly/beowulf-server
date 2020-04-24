@@ -22,8 +22,20 @@ const getCountry = (object, value) => {
     return filteredObj;
 }
 
+// Returns the country based on the ITU designation
+const getCities = (object, value) => {
+    var returnCities = [];
+    for(let r of object) {
+        if(r.country === value ) {
+            returnCities.push(r);
+        }
+    }
+    return returnCities;
+}
+
 
 
 exports.getSingleRecord = getSingleRecord;
 exports.buildRecord = buildRecord;
 exports.getCountry = getCountry;
+exports.getCities = getCities;

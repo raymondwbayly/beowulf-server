@@ -1903,6 +1903,29 @@
 						"description": "This returns a single country based on abbreviation"
 					},
 					"response": []
+				},
+				{
+					"name": "Get Cities by Country",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/geo/country/cities/US",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"geo",
+								"country",
+								"cities",
+								"US"
+							]
+						},
+						"description": "This returns the cities listed for a country, by the country liste. "
+					},
+					"response": []
 				}
 			],
 			"description": "This is the geographic endpoint for the geo tools",
