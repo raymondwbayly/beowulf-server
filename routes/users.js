@@ -25,6 +25,11 @@ router.get('/:uid', function(req, res, next) {
   res.send(Records.getSingleRecord(userObj.users,req.params.uid));
 });
 
+/* GET Config Object JSON return. */
+router.get('/search/lastname/:uid', function(req, res, next) {
+  res.send(Records.searchUsers(userObj.users,req.params.uid));
+});
+
 /* POST CREATE */
 router.post('/', function(req, res, next) {
   var firstname = req.body.firstname;
