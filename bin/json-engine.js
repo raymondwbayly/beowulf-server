@@ -30,22 +30,27 @@ var usersJSON =  require(usersJSONPath);
 
 const getTable = (table) => {
     var returnTable = ['Table return needs to be either alerts, config, release, news, tasks, users'];
-    if(table === 'alerts'){ returnTable = alertsJSON}
+    var returnPath = '';
+    if(table === 'alerts'){ returnTable = alertsJSON; returnPath = alertsJSONPath}
     if(table === 'config'){ returnTable = configJSON}
     if(table === 'release'){ returnTable = releaseNotesJSON}
     if(table === 'news'){ returnTable = newsJSON}
     if(table === 'tasks'){ returnTable = tasksJSON}
     if(table === 'users'){ returnTable = usersJSON}
-    return returnTable;
+    return {table: returnTable, path: returnPath};
 }
 
 const addToTable = (table, obj) => {
-    if(table === 'alerts'){ alertsJSON.push(obj)}
-    if(table === 'config'){ configJSON.push(obj)}
-    if(table === 'release'){ releaseNotesJSON.push(obj)}
-    if(table === 'news'){ newsJSON.push(obj)}
-    if(table === 'tasks'){ tasksJSON.push(obj)}
-    if(table === 'users'){ usersJSON.push(obj)}
+    var tmpObj = [];
+    if(table === 'alerts'){ alertsJSON.push(obj); tmpObj = alertsJSON;}
+    if(table === 'config'){ configJSON.push(obj); tmpObj = configJSON;}
+    if(table === 'release'){ releaseNotesJSON.push(obj); tmpObj = releaseNotesJSON;}
+    if(table === 'news'){ newsJSON.push(obj); tmpObj = newsJSON;}
+    if(table === 'tasks'){ tasksJSON.push(obj); tmpObj = tasksJSON;}
+    if(table === 'users'){ usersJSON.push(obj); tmpObj = usersJSON;}
+    var path = getTable(table).path;
+    console.log(alertsJSON);
+    writeJSONFile(tmpObj,path);
     return true;
 }
 
@@ -55,7 +60,7 @@ const listRecords = (table) => {
 }
 
 const getRecord = (table, uid) => {
-    var tmpTable = getTable(table);
+    var tmpTable = getTable(table).table;
     var totalKeys = Object.keys(tmpTable).length
     var tmpInd = uid;
     if(uid > totalKeys){
@@ -78,6 +83,13 @@ const deleteRecord = (table, uid) => {
 }
 
 const deactivateRecord = (table, uid) => {
+    return true;
+}
+
+const writeJSONFile = (tmpObj,path) => {
+    let data = JSON.stringify(tmpObj);
+
+    fs.writeFileSync(path, data);
     return true;
 }
 
