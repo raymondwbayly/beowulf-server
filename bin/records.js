@@ -33,9 +33,20 @@ const getCities = (object, value) => {
     return returnCities;
 }
 
+const searchUsers = (object, value) => {
+    var returnUsers = [];
+    for(let r of object) {
+        if(r.lastname === value ) {
+            returnUsers.push(r);
+        }
+    }
+    return returnUsers;
+}
+
 
 
 exports.getSingleRecord = getSingleRecord;
 exports.buildRecord = buildRecord;
 exports.getCountry = getCountry;
 exports.getCities = getCities;
+exports.searchUsers = searchUsers;

@@ -101,6 +101,7 @@ Once the server is installed, open a terminal window and to go the folder where 
 |```/auth/user```               |  POST  | AUTH USER |  Authorizes user on server    |
 |   USER CALLS                                                                       |
 |```/users```                   |  GET   | LIST      |  Lists Users                  |
+|```/users/search/lastname/{uid}```  |  GET   | JSON      |  Returns users                  |
 |```/users```                   |  POST  | STRING    |  Add User                     |
 |```/users```                   |  PUT   | STRING    |  Update User                  |
 |```/users/{uid}```             | DELETE | STRING    |  Deletes a user               |

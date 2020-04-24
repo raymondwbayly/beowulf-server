@@ -183,3 +183,9 @@ These are the task and version notes for the application,  they are filled out d
 - Added the ability for the system to return cities of a country
 - passing the ISO two letter code will return the list of cities
 - Upated the POSTMAN calls as well
+
+## Feature 77 Task (Search Users)
+
+- Search users by last name
+- Upated the POSTMAN calls as well
+
