@@ -89,9 +89,10 @@ const addRecord = (table, obj) => {
     return true;
 }
 
-const updateRecord = (table, uid, obj) => {
+const updateRecord = (table, obj) => {
     var tmpTable = getTable(table).table;
-    var tmpInd = findRecordIndex(tmpTable, uid);
+    var tmpInd = findRecordIndex(tmpTable, obj.id);
+    console.log(tmpInd);
     return true;
 }
 

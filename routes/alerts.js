@@ -42,7 +42,7 @@ router.put('/', function(req, res, next) {
   var email = req.body.email;
   var token = req.body.token;
   var alertPostJSON = {'id':id, 'title':title, 'date': date, 'description': desc, 'author': author, 'email': email, 'token': token}
-  var ret = jsonEngine.updateRecord('alerts', id, alertPostJSON);
+  var ret = jsonEngine.updateRecord('alerts', alertPostJSON);
   res.send(Msg.getUpdatedMessage() + JSON.stringify(alertPostJSON))
 });
 
