@@ -17,7 +17,7 @@ var response = new MockExpressResponse();
 /* POST CREATE */
 router.post('/', function(req, res, next) {
 
-  var alertPostJSON = {'title':req.body.title, 'date': req.body.date, 'description': req.body.description, 'author': req.body.author, 'email': req.body.email, 'token': req.body.token}
+  var alertPostJSON = {'id': 0, 'title':req.body.title, 'date': req.body.date, 'description': req.body.description, 'author': req.body.author, 'email': req.body.email, 'token': req.body.token}
   jsonEngine.addRecord('alerts', alertPostJSON);
   res.send(Msg.getSavedMessage() + JSON.stringify(alertPostJSON))
 });
@@ -42,6 +42,7 @@ router.put('/', function(req, res, next) {
   var email = req.body.email;
   var token = req.body.token;
   var alertPostJSON = {'id':id, 'title':title, 'date': date, 'description': desc, 'author': author, 'email': email, 'token': token}
+  var ret = jsonEngine.updateRecord('alerts', id, alertPostJSON);
   res.send(Msg.getUpdatedMessage() + JSON.stringify(alertPostJSON))
 });
 

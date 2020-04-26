@@ -1,5 +1,6 @@
 var path = require('path');
 var fs = require('fs');
+var lodash = require('lodash');
 // Read the Table data 
 
 // Alerts JSON
@@ -26,7 +27,11 @@ var fs = require('fs');
 var usersJSONPath = path.join(__dirname, '../lib', 'users.json');
 var usersJSON =  require(usersJSONPath);
 
-
+Array.prototype.remove = function(from, to) {
+    var rest = this.slice((to || from) + 1 || this.length);
+    this.length = from < 0 ? this.length + from : from;
+    return this.push.apply(this, rest);
+  };
 
 const getTable = (table) => {
     var returnTable = ['Table return needs to be either alerts, config, release, news, tasks, users'];
@@ -49,9 +54,16 @@ const addToTable = (table, obj) => {
     if(table === 'tasks'){ tasksJSON.push(obj); tmpObj = tasksJSON;}
     if(table === 'users'){ usersJSON.push(obj); tmpObj = usersJSON;}
     var path = getTable(table).path;
-    console.log(alertsJSON);
     writeJSONFile(tmpObj,path);
     return true;
+}
+
+const setRecordID = (table, obj) => {
+    var tmpObj = getTable(table).table;
+    var tmpInd = tmpObj.length;
+    tmpInd = tmpInd + 1;
+    obj.id = tmpInd;
+    return obj;
 }
 
 const listRecords = (table) => {
@@ -69,13 +81,29 @@ const getRecord = (table, uid) => {
     return tmpTable[tmpInd];
 }
 
+
+
 const addRecord = (table, obj) => {
+    obj = setRecordID(table, obj);
     addToTable(table, obj);
     return true;
 }
 
 const updateRecord = (table, uid, obj) => {
+    var tmpTable = getTable(table).table;
+    var tmpInd = findRecordIndex(tmpTable, uid);
     return true;
+}
+
+const findRecordByID = (table, uid) => {
+    var tmpTable = getTable(table).table;
+    var picked = lodash.filter(tmpTable, x => x.id === uid);
+    return picked;
+}
+
+const findRecordIndex = (table, uid) => {
+    var tmpInd = table.findIndex(x => x.id === uid);
+    return tmpInd;
 }
 
 const deleteRecord = (table, uid) => {
