@@ -17,7 +17,7 @@ var response = new MockExpressResponse();
 /* POST CREATE */
 router.post('/', function(req, res, next) {
 
-  var alertPostJSON = {'id': 0, 'title':req.body.title, 'date': req.body.date, 'description': req.body.description, 'author': req.body.author, 'email': req.body.email, 'token': req.body.token}
+  var alertPostJSON = {'id': 0, 'title':req.body.title, 'date': req.body.date, 'description': req.body.description, 'author': req.body.author, 'email': req.body.email}
   jsonEngine.addRecord('alerts', alertPostJSON);
   res.send(Msg.getSavedMessage() + JSON.stringify(alertPostJSON))
 });
@@ -41,7 +41,7 @@ router.put('/', function(req, res, next) {
   var author = req.body.author;
   var email = req.body.email;
   var token = req.body.token;
-  var alertPostJSON = {'id':id, 'title':title, 'date': date, 'description': desc, 'author': author, 'email': email, 'token': token}
+  var alertPostJSON = {'id':id, 'title':title, 'date': date, 'description': desc, 'author': author, 'email': email}
   var ret = jsonEngine.updateRecord('alerts', alertPostJSON);
   res.send(Msg.getUpdatedMessage() + JSON.stringify(alertPostJSON))
 });
@@ -50,6 +50,12 @@ router.put('/', function(req, res, next) {
 router.delete('/:uid', function(req, res, next) {
 
   res.send(Msg.getDeleteMessage() + 'ID:' + req.params.uid)
+});
+
+/* GET DEACTIVATE. */
+router.get('/deactivate/:uid', function(req, res, next) {
+  jsonEngine.deactivateRecord('alerts', req.params.uid);
+  res.send(Msg.getDeactivateMessage())
 });
 
 module.exports = router;

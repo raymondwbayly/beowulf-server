@@ -345,6 +345,28 @@
 						"description": "This allows you to deactivate the user on the system"
 					},
 					"response": []
+				},
+				{
+					"name": "Search User by Last Name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/users/search/lastname/Smith",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"search",
+								"lastname",
+								"Smith"
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"protocolProfileBehavior": {}
@@ -432,9 +454,9 @@
 									"type": "text"
 								},
 								{
-									"key": "token",
-									"value": "erg4twhy4y54h4",
-									"description": "This is the auth token to allow for permissions. ",
+									"key": "active",
+									"value": "yes",
+									"description": "This is active",
 									"type": "text"
 								}
 							]
@@ -464,44 +486,44 @@
 							"urlencoded": [
 								{
 									"key": "id",
-									"value": "1",
+									"value": "12",
 									"description": "ID of the Alert",
 									"type": "text"
 								},
 								{
 									"key": "title",
-									"value": "Test title",
-									"description": "Title of the alert",
+									"value": "New Alert Update POW POW",
+									"description": "This is the alert title",
 									"type": "text"
 								},
 								{
 									"key": "date",
-									"value": "01/01/2020",
+									"value": "01.01.2020",
 									"description": "Date of the alert",
 									"type": "text"
 								},
 								{
 									"key": "description",
-									"value": "This is a test alert to simulate upfating one ",
-									"description": "Description of the Alert",
+									"value": "This is the alert description this is what we do to update the alert",
+									"description": "Description of alert",
 									"type": "text"
 								},
 								{
 									"key": "author",
-									"value": "Raymond Bayly",
-									"description": "The author of the alert",
+									"value": "Ray Bayly",
+									"description": "This is the author",
 									"type": "text"
 								},
 								{
 									"key": "email",
-									"value": "jsmith@company.com",
-									"description": "Email of the reciepent of the alert",
+									"value": "rbayly@company.com",
+									"description": "This is the author email",
 									"type": "text"
 								},
 								{
-									"key": "token",
-									"value": "sdgergt453",
-									"description": "Authorization token",
+									"key": "active",
+									"value": "yes",
+									"description": "If the record is active",
 									"type": "text"
 								}
 							]
@@ -539,6 +561,28 @@
 							]
 						},
 						"description": "This simulates teh deletion of an alert. "
+					},
+					"response": []
+				},
+				{
+					"name": "Deactivate Task",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/alerts/deactivate/12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"alerts",
+								"deactivate",
+								"12"
+							]
+						},
+						"description": "This deactivates the task on the system"
 					},
 					"response": []
 				}

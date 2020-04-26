@@ -81,8 +81,6 @@ const getRecord = (table, uid) => {
     return tmpTable[tmpInd];
 }
 
-
-
 const addRecord = (table, obj) => {
     obj = setRecordID(table, obj);
     addToTable(table, obj);
@@ -90,9 +88,19 @@ const addRecord = (table, obj) => {
 }
 
 const updateRecord = (table, obj) => {
-    var tmpTable = getTable(table).table;
-    var tmpInd = findRecordIndex(tmpTable, obj.id);
-    console.log(tmpInd);
+    var savedTable = getTable(table).table;
+    var path = getTable(table).path;
+    var tmpInd = findRecordIndex(savedTable, obj.id);
+    if(table === 'alerts'){
+        savedTable[tmpInd].id = obj.id;
+        savedTable[tmpInd].title = obj.title;
+        savedTable[tmpInd].date = obj.date;
+        savedTable[tmpInd].description = obj.description;
+        savedTable[tmpInd].author = obj.author;
+        savedTable[tmpInd].email = obj.email;
+        savedTable[tmpInd].active = obj.active;
+    }
+    writeJSONFile(savedTable,path);
     return true;
 }
 
@@ -108,16 +116,21 @@ const findRecordIndex = (table, uid) => {
 }
 
 const deleteRecord = (table, uid) => {
+    // TODO Create a delete function
     return true;
 }
 
 const deactivateRecord = (table, uid) => {
+    var savedTable = getTable(table).table;
+    var path = getTable(table).path;
+    var tmpInd = findRecordIndex(savedTable, uid);
+    savedTable[tmpInd].active = 'No';
+    writeJSONFile(savedTable,path);
     return true;
 }
 
 const writeJSONFile = (tmpObj,path) => {
     let data = JSON.stringify(tmpObj);
-
     fs.writeFileSync(path, data);
     return true;
 }
