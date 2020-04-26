@@ -1,15 +1,7 @@
 var express = require('express');
 var router = express.Router();
-var path = require('path');
-var fs = require('fs');
-var ejs = require('ejs');
 var Msg = require('../bin/messages');
-var Records = require('../bin/records');
 var jsonEngine = require('../bin/json-engine');
-var MockExpressRequest = require('mock-express-request');
-var MockExpressResponse = require('mock-express-response');
-
-var response = new MockExpressResponse();
 
 
 // *********************************** URI ROUTE CALLS ******************************************** //
@@ -40,9 +32,8 @@ router.put('/', function(req, res, next) {
   var desc = req.body.description;
   var author = req.body.author;
   var email = req.body.email;
-  var token = req.body.token;
   var alertPostJSON = {'id':id, 'title':title, 'date': date, 'description': desc, 'author': author, 'email': email}
-  var ret = jsonEngine.updateRecord('alerts', alertPostJSON);
+  jsonEngine.updateRecord('alerts', alertPostJSON);
   res.send(Msg.getUpdatedMessage() + JSON.stringify(alertPostJSON))
 });
 

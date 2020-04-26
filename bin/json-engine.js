@@ -73,11 +73,7 @@ const listRecords = (table) => {
 
 const getRecord = (table, uid) => {
     var tmpTable = getTable(table).table;
-    var totalKeys = Object.keys(tmpTable).length
-    var tmpInd = uid;
-    if(uid > totalKeys){
-        tmpInd = 1;
-    }
+    var tmpInd = findRecordIndex(tmpTable, uid);
     return tmpTable[tmpInd];
 }
 
