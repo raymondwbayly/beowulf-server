@@ -135,7 +135,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/users/12",
+							"raw": "http://localhost:3000/users/4",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -143,7 +143,7 @@
 							"port": "3000",
 							"path": [
 								"users",
-								"12"
+								"4"
 							]
 						},
 						"description": "This returns the user "
@@ -201,9 +201,9 @@
 									"type": "text"
 								},
 								{
-									"key": "token",
-									"value": "juyhguy76uh",
-									"description": "Auth Token",
+									"key": "active",
+									"value": "true",
+									"description": "Active Users",
 									"type": "text"
 								}
 							]
@@ -275,14 +275,14 @@
 									"type": "text"
 								},
 								{
-									"key": "token",
-									"value": "juyhguy76uh",
-									"description": "Auth Token",
+									"key": "active",
+									"value": "true",
+									"description": "User active",
 									"type": "text"
 								},
 								{
 									"key": "id",
-									"value": "1",
+									"value": "4",
 									"description": "The id of the user",
 									"type": "text"
 								}
@@ -330,7 +330,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/users/deactivate/332",
+							"raw": "http://localhost:3000/users/active/4",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -338,8 +338,8 @@
 							"port": "3000",
 							"path": [
 								"users",
-								"deactivate",
-								"332"
+								"active",
+								"4"
 							]
 						},
 						"description": "This allows you to deactivate the user on the system"

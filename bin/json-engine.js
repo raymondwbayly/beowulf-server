@@ -157,6 +157,19 @@ const writeJSONFile = (tmpObj,path) => {
     return true;
 }
 
+const searchRecords = (table, value) => {
+    var tmpTable = getTable(table).table;
+    var tmpSearched = [];
+    if(table === 'users'){
+        for(let r of tmpTable) {
+            if(r.lastname === value ) {
+                tmpSearched.push(r);
+            }
+        }
+    }
+    return tmpSearched;
+}
+
 
 exports.listRecords = listRecords;
 exports.getRecord = getRecord;
@@ -164,3 +177,4 @@ exports.addRecord = addRecord;
 exports.updateRecord = updateRecord;
 exports.deleteRecord = deleteRecord;
 exports.checkActiveStatus = checkActiveStatus;
+exports.searchRecords = searchRecords;
