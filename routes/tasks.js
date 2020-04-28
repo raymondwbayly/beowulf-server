@@ -1,23 +1,18 @@
 var express = require('express');
 var router = express.Router();
-var path = require('path');
-var fs = require('fs');
-var Records = require('../bin/records');
 var Msg = require('../bin/messages');
+var jsonEngine = require('../bin/json-engine');
+ 
 
-// Alerts File for the static data
-var tasksJSON = path.join(__dirname, '../lib', 'tasks.json');
-var taskObj =  require(tasksJSON);
 
 /* GET tasks listing. */
 router.get('/', function(req, res, next) {
-  var readable = fs.createReadStream(tasksJSON);
-  readable.pipe(res);
+  res.send(jsonEngine.listRecords('tasks'));
 });
 
 /* GET task Object JSON return. */
 router.get('/:uid', function(req, res, next) {
-  res.send(Records.getSingleRecord(taskObj.tasks,req.params.uid));
+  res.send(jsonEngine.getRecord('tasks', req.params.uid));
 });
 
 /* POST CREATE */
@@ -31,10 +26,10 @@ router.post('/', function(req, res, next) {
   var status = req.body.status;
   var create = req.body.create;
   var complete = req.body.complete;
-  var token = req.body.token;
+  var active = req.body.active;
 
-  var taskPostJSON = {"author":author,"author-id":authorid, "assignee":assignee, "assignee-id":assigneeid, "title":title, "body":task, "status":status, "date-create":create, "date-complete":complete}
-
+  var taskPostJSON = {"id":0, "author":author,"author-id":authorid, "assignee":assignee, "assignee-id":assigneeid, "title":title, "body":task, "status":status, "date-create":create, "date-complete":complete, "active":active}
+  jsonEngine.addRecord('tasks', taskPostJSON);
   res.send(Msg.getSavedMessage() + JSON.stringify(taskPostJSON))
 });
 
@@ -50,22 +45,22 @@ router.put('/', function(req, res, next) {
   var status = req.body.status;
   var create = req.body.create;
   var complete = req.body.complete;
-  var token = req.body.token;
+  var active = req.body.active;
 
-  var taskPostJSON = {"id":id,"author":author,"author-id":authorid, "assignee":assignee, "assignee-id":assigneeid, "title":title, "body":task, "status":status, "date-create":create, "date-complete":complete}
-
+  var taskPostJSON = {"id":id,"author":author,"author-id":authorid, "assignee":assignee, "assignee-id":assigneeid, "title":title, "body":task, "status":status, "date-create":create, "date-complete":complete, "active":active}
+  jsonEngine.updateRecord('tasks', taskPostJSON);
   res.send(Msg.getUpdatedMessage() + JSON.stringify(taskPostJSON))
 });
 
 /* DELETE delete record */
 router.delete('/:uid', function(req, res, next) {
-
   res.send(Msg.getDeleteMessage() + 'ID:' + req.params.uid)
 });
 
-/* GET task Object JSON return. */
-router.get('/complete/:uid', function(req, res, next) {
-  res.send('Task Marked as Complete');
+/* GET DEACTIVATE. */
+router.get('/active/:uid', function(req, res, next) {
+  jsonEngine.checkActiveStatus('tasks', req.params.uid);
+  res.send(Msg.getActiveCheckMessage())
 });
 
 module.exports = router;

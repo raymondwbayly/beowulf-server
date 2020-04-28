@@ -1,8 +1,6 @@
 # Beowulf - Server
 
-
 [![N|Solid](https://github.com/raymondwbayly/beowulf-assets/blob/master/img/pub/beowulf-node-server-banner-2.png?raw=true)](https://github.com/raymondwbayly/beowulf-server)
-
 
 [![N|Solid](https://github.com/raymondwbayly/beowulf-assets/blob/master/img/pub/beowulf-suite-graphic-2.png?raw=true)](https://github.com/raymondwbayly/beowulf-server)
 
@@ -21,7 +19,7 @@ Beowulf Server is a Node JS Rest Architecture for supporting the Beowulf prototy
 - ```npm install```
 - ```DEBUG=myapp:* npm start``` for mac
 - ```set DEBUG=myapp:* & npm start``` for windows.
--  Open a browser window and point it at ```http://localhost:3000/``` to view the server homepage
+- Open a browser window and point it at ```http://localhost:3000/``` to view the server homepage
 
 ---
 
@@ -134,6 +132,7 @@ Once the server is installed, open a terminal window and to go the folder where 
 |```/tasks/32```                | DELETE | STRING    |  Delete task on server        |
 |```/tasks/complete/23```       |  GET   | STRING    |  Update task as complete      |
 |```/tasks/{uid}```             |  GET   | ITEM      |  A task                       |
+|```/tasks/active/{uid}```             |  GET   | ITEM      |  Task Completed                       |
 |   CONFIG CALLS                                                                     |
 |```/cfg```                     |  GET   | LIST      |  Application Settings (JSON)  |
 |```/cfg/version```             |  GET   | JSON      |  Returns Version Object       |

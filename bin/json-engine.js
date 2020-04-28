@@ -105,6 +105,19 @@ const updateRecord = (table, obj) => {
         savedTable[tmpInd].body = obj.story;
         savedTable[tmpInd].active = obj.active;
     }
+    if(table === 'tasks'){
+        savedTable[tmpInd].id = obj.id;
+        savedTable[tmpInd].author = obj.author;
+        savedTable[tmpInd].authorid = obj.authorid;
+        savedTable[tmpInd].assignee = obj.assignee;
+        savedTable[tmpInd].assigneeid = obj.assigneeid;
+        savedTable[tmpInd].title = obj.title;
+        savedTable[tmpInd].task = obj.task;
+        savedTable[tmpInd].status = obj.status;
+        savedTable[tmpInd].create = obj.create;
+        savedTable[tmpInd].complete = obj.complete;
+        savedTable[tmpInd].active = obj.active;
+    }
     writeJSONFile(savedTable,path);
     return true;
 }
