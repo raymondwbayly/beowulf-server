@@ -1,52 +1,47 @@
-const getSingleRecord = (obj,num) => {
-    var totalKeys = Object.keys(obj).length
-    var tmpInd = num;
-    if(num > totalKeys){
-        tmpInd = 1;
+var path = require('path');
+var fs = require('fs');
+var lodash = require('lodash');
+// Read the Table data 
+
+// Lookup Timezones JSON
+    var timeZonesJSONPath = path.join(__dirname, '../../lib/lookup', 'timezones.json');
+    var timeZonesJSON =  require(timeZonesJSONPath);
+
+    // Lookup Titles JSON
+    var titlesJSONPath = path.join(__dirname, '../../lib/lookup', 'titles.json');
+    var titlesJSON =  require(titlesJSONPath);
+
+    const findRecordByID = (table, uid) => {
+        var tmpTable = getJSON(table).table;
+        var picked = lodash.filter(tmpTable, x => x.id === uid);
+        return picked;
     }
-    return obj[tmpInd];
-}
-
-const buildRecord = (obj,num) => {
-    var retJSON = {};
-    return retJSON;
-}
-
-// Returns the country based on the ITU designation
-const getCountry = (object, value) => {
-    var filteredObj = object.find(function(item, i){
-        if(item.ISO3166 === value){
-          return i;
-        }
-    });
-    return filteredObj;
-}
-
-// Returns the country based on the ITU designation
-const getCities = (object, value) => {
-    var returnCities = [];
-    for(let r of object) {
-        if(r.country === value ) {
-            returnCities.push(r);
-        }
+    const findRecordIndex = (table, uid) => {
+        var tmpInd = table.findIndex(x => x.id === uid);
+        return tmpInd;
     }
-    return returnCities;
-}
-
-const searchUsers = (object, value) => {
-    var returnUsers = [];
-    for(let r of object) {
-        if(r.lastname === value ) {
-            returnUsers.push(r);
-        }
+    const getJSON = (table) => {
+        var returnTable = ['Table return needs to be either alerts, config, release, news, tasks, users'];
+        var returnPath = '';
+        if(table === 'timezones'){ returnTable = timeZonesJSON; returnPath = timeZonesJSONPath}
+        if(table === 'titles'){ returnTable = titlesJSON; returnPath = titlesJSONPath}
+        return {table: returnTable, path: returnPath};
     }
-    return returnUsers;
-}
+
+
+    const listRecords = (table) => {
+        var tmpTable = getTable(table);
+        return tmpTable;
+    }
+
+    
+    const getRecord = (table, uid) => {
+        var tmpTable = getJSON(table).table;
+        var tmpInd = findRecordIndex(tmpTable, uid);
+        return tmpTable[tmpInd];
+    }
 
 
 
-exports.getSingleRecord = getSingleRecord;
-exports.buildRecord = buildRecord;
-exports.getCountry = getCountry;
-exports.getCities = getCities;
-exports.searchUsers = searchUsers;
+exports.listRecords = listRecords;
+exports.getRecord = getRecord;
