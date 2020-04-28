@@ -37,11 +37,11 @@ const getTable = (table) => {
     var returnTable = ['Table return needs to be either alerts, config, release, news, tasks, users'];
     var returnPath = '';
     if(table === 'alerts'){ returnTable = alertsJSON; returnPath = alertsJSONPath}
-    if(table === 'config'){ returnTable = configJSON}
-    if(table === 'release'){ returnTable = releaseNotesJSON}
-    if(table === 'news'){ returnTable = newsJSON}
-    if(table === 'tasks'){ returnTable = tasksJSON}
-    if(table === 'users'){ returnTable = usersJSON}
+    if(table === 'config'){ returnTable = configJSON; returnPath = configJSONPath}
+    if(table === 'release'){ returnTable = releaseNotesJSON; returnPath = releaseNotesJSONPath}
+    if(table === 'news'){ returnTable = newsJSON; returnPath = newsJSONPath}
+    if(table === 'tasks'){ returnTable = tasksJSON; returnPath = tasksJSONPath}
+    if(table === 'users'){ returnTable = usersJSON; returnPath = usersJSONPath}
     return {table: returnTable, path: returnPath};
 }
 

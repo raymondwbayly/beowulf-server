@@ -11,13 +11,12 @@ var newsJSON = path.join(__dirname, '../lib', 'news.json');
 var storyObj =  require(newsJSON);
 /* GET News listing. */
 router.get('/', function(req, res, next) {
-  var readable = fs.createReadStream(newsJSON);
-  readable.pipe(res);
+  res.send(jsonEngine.listRecords('news'));
 });
 
 /* GET returns news story. */
 router.get('/:uid', function(req, res, next) {
-  res.send(Records.getSingleRecord(storyObj.news,req.params.uid));
+  res.send(jsonEngine.getRecord('news', req.params.uid));
 });
 
 /* POST CREATE */
@@ -28,10 +27,10 @@ router.post('/', function(req, res, next) {
   var media = req.body.media;
   var title = req.body.title;
   var story = req.body.story;
-  var token = req.body.token;
+  var active = req.body.active;
 
-  var newsPostJSON = {'author': author, 'authorid': authorid, 'date': date, 'media': media, 'title': title, 'story': story, 'token': token}
-
+  var newsPostJSON = {'id': 0, 'author': author, 'authorid': authorid, 'date': date, 'media': media, 'title': title, 'body': story, 'active':active}
+  jsonEngine.addRecord('news', newsPostJSON);
   res.send(Msg.getSavedMessage() + JSON.stringify(newsPostJSON))
 });
 
@@ -45,7 +44,7 @@ router.put('/', function(req, res, next) {
   var title = req.body.title;
   var story = req.body.story;
   var token = req.body.token;
-  var newsPostJSON = {'id':id,'author': author, 'authorid': authorid, 'date': date, 'media': media, 'title': title, 'story': story, 'token': token}
+  var newsPostJSON = {'id':id,'author': author, 'authorid': authorid, 'date': date, 'media': media, 'title': title, 'body': story, 'token': token}
   res.send(Msg.getUpdatedMessage() + JSON.stringify(newsPostJSON))
 });
 
