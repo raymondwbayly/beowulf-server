@@ -10,7 +10,7 @@ These are the task and version notes for the application,  they are filled out d
 
 ## ISSUE 1 - Building out the Framework
 
-- Created a postman collection and exported it to ```docs```, download it there to get the latest server call examples. 
+- Created a postman collection and exported it to ```docs```, download it there to get the latest server call examples.
 - Build out the readme and version notes for the server.
 - Added Auth Default Route
 - Added Users Default Route
@@ -37,6 +37,7 @@ These are the task and version notes for the application,  they are filled out d
 - Setup a JSON file library for returning data for the test
 
 ## Feature 6 Application Authorization on the system
+
 - Passing a post with id, token and geo allows you to authorize the app
 - the token MUST be ```2234FFR1RRDF``` to recieve a successfull authorization
 - Passing the same token to ```auth/user``` along with id, geo and pass will return a user profile and authorize a user on the system
@@ -46,11 +47,12 @@ These are the task and version notes for the application,  they are filled out d
 - Updated the postman collection (download the latest version under ```docs```)
 - The default ```calendar``` call will return that days events
 - The ```calendar/week``` will return the current weeks events, if you pass a first day it will return the event for the week specified
--  The ```calendar/day``` will return the current days events, if you pass a day it will return them for that day
--  The ```calendar/month``` will return the current month , if you pass a month number it will return that month's events.
--  The ```calendar/event``` will return the event of the id you pass
+- The ```calendar/day``` will return the current days events, if you pass a day it will return them for that day
+- The ```calendar/month``` will return the current month , if you pass a month number it will return that month's events.
+- The ```calendar/event``` will return the event of the id you pass
 
 ## Feature 8 Adding tasks to the Server
+
 - Adds the ability to list tasks from the server
 - Adds the ability to retrieve a single task from the server
 
@@ -182,15 +184,21 @@ These are the task and version notes for the application,  they are filled out d
 
 - Added the ability for the system to return cities of a country
 - passing the ISO two letter code will return the list of cities
-- Upated the POSTMAN calls as well
+- Updated the POSTMAN calls as well
 
 ## Feature 77 Task (Search Users)
 
 - Search users by last name
-- Upated the POSTMAN calls as well
+- Updated the POSTMAN calls as well
 
 ## Feature 81 Task (Update News to use JSON engine)
 
 - Update the news system to use the JSON engine
-- Upated the POSTMAN calls as well
+- Updated the POSTMAN calls as well
+
+
+## Feature 83 Tasks (Update tasks to use JSON engine)
+
+- Update the tasks system to use the JSON engine
+- Updated the POSTMAN calls as well
 
