@@ -4,11 +4,14 @@ var Msg = require('../bin/messages');
 var Sec = require('../bin/security');
 var lookupEngine = require('../bin/engines/lookup');
 
+/************ THIS IS THE DEFAULT ROUTE  */
 
 /* GET tasks listing. */
 router.get('/', function(req, res, next) {
     res.send('Accessing Lookup, use timezones, titles for records');
 });
+
+/************ JOB TITLE ROUTES */
 
 /* GET Job Title List. */
 router.get('/jobtitles', function(req, res, next) {
@@ -17,8 +20,10 @@ router.get('/jobtitles', function(req, res, next) {
 
 /* GET Retrieve Job Title Zone. */
 router.get('/jobtitle/:uid', function(req, res, next) {
-    res.send(jsonEngine.getRecord('titles', req.params.uid));
+    res.send(lookupEngine.getRecord('titles', req.params.uid));
 });
+
+/************ TIMEZONE ROUTES  */
 
 /* GET Time Zones List. */
 router.get('/timezones', function(req, res, next) {
@@ -27,7 +32,7 @@ router.get('/timezones', function(req, res, next) {
 
 /* GET Retrieve a Time Zone. */
 router.get('/timezone/:uid', function(req, res, next) {
-    res.send(jsonEngine.getRecord('timeszones', req.params.uid));
+    res.send(lookupEngine.getRecord('timezones', req.params.uid));
 });
 
 

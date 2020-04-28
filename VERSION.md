@@ -196,9 +196,12 @@ These are the task and version notes for the application,  they are filled out d
 - Update the news system to use the JSON engine
 - Updated the POSTMAN calls as well
 
-
 ## Feature 83 Tasks (Update tasks to use JSON engine)
 
 - Update the tasks system to use the JSON engine
 - Updated the POSTMAN calls as well
 
+## Feature 87 Tasks (Update LOOKUP to use JSON LOOKUP engine)
+
+- Update the tasks system to use the JSON engine
+- Updated the POSTMAN calls as well

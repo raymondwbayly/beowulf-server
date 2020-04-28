@@ -30,7 +30,7 @@ var lodash = require('lodash');
 
 
     const listRecords = (table) => {
-        var tmpTable = getTable(table);
+        var tmpTable = getJSON(table);
         return tmpTable;
     }
 
