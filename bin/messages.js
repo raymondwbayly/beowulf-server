@@ -27,8 +27,8 @@ const getDeleteMessage = () => {
     return 'The Record has been deleted ' + '\n'
 }
 
-const getDeactivateMessage = () => {
-    return 'The record has been deactivated ' + '\n'
+const getActiveCheckMessage = () => {
+    return 'The active status has been changed ' + '\n'
 }
 
 
@@ -39,4 +39,4 @@ exports.getUnAuthorized = getUnAuthorized;
 exports.getSavedMessage = getSavedMessage;
 exports.getUpdatedMessage = getUpdatedMessage;
 exports.getDeleteMessage = getDeleteMessage;
-exports.getDeactivateMessage = getDeactivateMessage;
+exports.getActiveCheckMessage = getActiveCheckMessage;

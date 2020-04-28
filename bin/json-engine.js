@@ -11,7 +11,7 @@ var lodash = require('lodash');
     var configJSONPath = path.join(__dirname, '../lib', 'config.json');
     var configJSON =  require(configJSONPath);
 
-// news Release Notes
+//  Release Notes
     var releaseNotesJSONPath = path.join(__dirname, '../lib', 'release-notes.json');
     var releaseNotesJSON =  require(releaseNotesJSONPath);
 
@@ -19,11 +19,11 @@ var lodash = require('lodash');
     var newsJSONPath = path.join(__dirname, '../lib', 'news.json');
     var newsJSON =  require(newsJSONPath);
 
-// news JSON
+// tasks JSON
     var tasksJSONPath = path.join(__dirname, '../lib', 'tasks.json');
     var tasksJSON =  require(tasksJSONPath);
 
-// news JSON
+// users JSON
 var usersJSONPath = path.join(__dirname, '../lib', 'users.json');
 var usersJSON =  require(usersJSONPath);
 
@@ -116,11 +116,15 @@ const deleteRecord = (table, uid) => {
     return true;
 }
 
-const deactivateRecord = (table, uid) => {
+const checkActiveStatus = (table, uid) => {
     var savedTable = getTable(table).table;
     var path = getTable(table).path;
     var tmpInd = findRecordIndex(savedTable, uid);
-    savedTable[tmpInd].active = 'No';
+    if(savedTable[tmpInd].active === 'true'){
+        savedTable[tmpInd].active = 'false';
+    } else {
+        savedTable[tmpInd].active = 'true';
+    }
     writeJSONFile(savedTable,path);
     return true;
 }
@@ -137,4 +141,4 @@ exports.getRecord = getRecord;
 exports.addRecord = addRecord;
 exports.updateRecord = updateRecord;
 exports.deleteRecord = deleteRecord;
-exports.deactivateRecord = deactivateRecord;
+exports.checkActiveStatus = checkActiveStatus;

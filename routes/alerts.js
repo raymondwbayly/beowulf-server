@@ -9,7 +9,7 @@ var jsonEngine = require('../bin/json-engine');
 /* POST CREATE */
 router.post('/', function(req, res, next) {
 
-  var alertPostJSON = {'id': 0, 'title':req.body.title, 'date': req.body.date, 'description': req.body.description, 'author': req.body.author, 'email': req.body.email}
+  var alertPostJSON = {'id': 0, 'title':req.body.title, 'date': req.body.date, 'description': req.body.description, 'author': req.body.author, 'email': req.body.email, 'active':'true'}
   jsonEngine.addRecord('alerts', alertPostJSON);
   res.send(Msg.getSavedMessage() + JSON.stringify(alertPostJSON))
 });
@@ -32,7 +32,8 @@ router.put('/', function(req, res, next) {
   var desc = req.body.description;
   var author = req.body.author;
   var email = req.body.email;
-  var alertPostJSON = {'id':id, 'title':title, 'date': date, 'description': desc, 'author': author, 'email': email}
+  var active = req.body.active;
+  var alertPostJSON = {'id':id, 'title':title, 'date': date, 'description': desc, 'author': author, 'email': email, 'active': active}
   jsonEngine.updateRecord('alerts', alertPostJSON);
   res.send(Msg.getUpdatedMessage() + JSON.stringify(alertPostJSON))
 });
@@ -44,9 +45,9 @@ router.delete('/:uid', function(req, res, next) {
 });
 
 /* GET DEACTIVATE. */
-router.get('/deactivate/:uid', function(req, res, next) {
-  jsonEngine.deactivateRecord('alerts', req.params.uid);
-  res.send(Msg.getDeactivateMessage())
+router.get('/active/:uid', function(req, res, next) {
+  jsonEngine.checkActiveStatus('alerts', req.params.uid);
+  res.send(Msg.getActiveCheckMessage())
 });
 
 module.exports = router;

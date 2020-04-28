@@ -4,6 +4,7 @@ var path = require('path');
 var fs = require('fs');
 var Records = require('../bin/records');
 var Msg = require('../bin/messages');
+var jsonEngine = require('../bin/json-engine');
 
 // Alerts File for the static data
 var newsJSON = path.join(__dirname, '../lib', 'news.json');
