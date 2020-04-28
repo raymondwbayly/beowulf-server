@@ -2,21 +2,20 @@ var express = require('express');
 var router = express.Router();
 var path = require('path');
 var fs = require('fs');
-var Records = require('../bin/records');
 var Msg = require('../bin/messages');
+var jsonEngine = require('../bin/json-engine');
 
 // Alerts File for the static data
 var newsJSON = path.join(__dirname, '../lib', 'news.json');
 var storyObj =  require(newsJSON);
 /* GET News listing. */
 router.get('/', function(req, res, next) {
-  var readable = fs.createReadStream(newsJSON);
-  readable.pipe(res);
+  res.send(jsonEngine.listRecords('news'));
 });
 
 /* GET returns news story. */
 router.get('/:uid', function(req, res, next) {
-  res.send(Records.getSingleRecord(storyObj.news,req.params.uid));
+  res.send(jsonEngine.getRecord('news', req.params.uid));
 });
 
 /* POST CREATE */
@@ -27,10 +26,10 @@ router.post('/', function(req, res, next) {
   var media = req.body.media;
   var title = req.body.title;
   var story = req.body.story;
-  var token = req.body.token;
+  var active = req.body.active;
 
-  var newsPostJSON = {'author': author, 'authorid': authorid, 'date': date, 'media': media, 'title': title, 'story': story, 'token': token}
-
+  var newsPostJSON = {'id': 0, 'author': author, 'authorid': authorid, 'date': date, 'media': media, 'title': title, 'body': story, 'active':active}
+  jsonEngine.addRecord('news', newsPostJSON);
   res.send(Msg.getSavedMessage() + JSON.stringify(newsPostJSON))
 });
 
@@ -43,8 +42,9 @@ router.put('/', function(req, res, next) {
   var media = req.body.media;
   var title = req.body.title;
   var story = req.body.story;
-  var token = req.body.token;
-  var newsPostJSON = {'id':id,'author': author, 'authorid': authorid, 'date': date, 'media': media, 'title': title, 'story': story, 'token': token}
+  var active = req.body.active;
+  var newsPostJSON = {'id':id,'author': author, 'authorid': authorid, 'date': date, 'media': media, 'title': title, 'body': story, 'active': active}
+  jsonEngine.updateRecord('news', newsPostJSON);
   res.send(Msg.getUpdatedMessage() + JSON.stringify(newsPostJSON))
 });
 
@@ -52,6 +52,12 @@ router.put('/', function(req, res, next) {
 router.delete('/:uid', function(req, res, next) {
 
   res.send(Msg.getDeleteMessage() + 'ID:' + req.params.uid)
+});
+
+/* GET DEACTIVATE. */
+router.get('/active/:uid', function(req, res, next) {
+  jsonEngine.checkActiveStatus('news', req.params.uid);
+  res.send(Msg.getActiveCheckMessage())
 });
 
 module.exports = router;

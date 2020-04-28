@@ -11,7 +11,7 @@ var lodash = require('lodash');
     var configJSONPath = path.join(__dirname, '../lib', 'config.json');
     var configJSON =  require(configJSONPath);
 
-// news Release Notes
+//  Release Notes
     var releaseNotesJSONPath = path.join(__dirname, '../lib', 'release-notes.json');
     var releaseNotesJSON =  require(releaseNotesJSONPath);
 
@@ -19,11 +19,11 @@ var lodash = require('lodash');
     var newsJSONPath = path.join(__dirname, '../lib', 'news.json');
     var newsJSON =  require(newsJSONPath);
 
-// news JSON
+// tasks JSON
     var tasksJSONPath = path.join(__dirname, '../lib', 'tasks.json');
     var tasksJSON =  require(tasksJSONPath);
 
-// news JSON
+// users JSON
 var usersJSONPath = path.join(__dirname, '../lib', 'users.json');
 var usersJSON =  require(usersJSONPath);
 
@@ -37,11 +37,11 @@ const getTable = (table) => {
     var returnTable = ['Table return needs to be either alerts, config, release, news, tasks, users'];
     var returnPath = '';
     if(table === 'alerts'){ returnTable = alertsJSON; returnPath = alertsJSONPath}
-    if(table === 'config'){ returnTable = configJSON}
-    if(table === 'release'){ returnTable = releaseNotesJSON}
-    if(table === 'news'){ returnTable = newsJSON}
-    if(table === 'tasks'){ returnTable = tasksJSON}
-    if(table === 'users'){ returnTable = usersJSON}
+    if(table === 'config'){ returnTable = configJSON; returnPath = configJSONPath}
+    if(table === 'release'){ returnTable = releaseNotesJSON; returnPath = releaseNotesJSONPath}
+    if(table === 'news'){ returnTable = newsJSON; returnPath = newsJSONPath}
+    if(table === 'tasks'){ returnTable = tasksJSON; returnPath = tasksJSONPath}
+    if(table === 'users'){ returnTable = usersJSON; returnPath = usersJSONPath}
     return {table: returnTable, path: returnPath};
 }
 
@@ -96,6 +96,15 @@ const updateRecord = (table, obj) => {
         savedTable[tmpInd].email = obj.email;
         savedTable[tmpInd].active = obj.active;
     }
+    if(table === 'news'){
+        savedTable[tmpInd].id = obj.id;
+        savedTable[tmpInd].author = obj.author;
+        savedTable[tmpInd].authorid = obj.authorid;
+        savedTable[tmpInd].date = obj.date;
+        savedTable[tmpInd].media = obj.media;
+        savedTable[tmpInd].body = obj.story;
+        savedTable[tmpInd].active = obj.active;
+    }
     writeJSONFile(savedTable,path);
     return true;
 }
@@ -116,11 +125,15 @@ const deleteRecord = (table, uid) => {
     return true;
 }
 
-const deactivateRecord = (table, uid) => {
+const checkActiveStatus = (table, uid) => {
     var savedTable = getTable(table).table;
     var path = getTable(table).path;
     var tmpInd = findRecordIndex(savedTable, uid);
-    savedTable[tmpInd].active = 'No';
+    if(savedTable[tmpInd].active === 'true'){
+        savedTable[tmpInd].active = 'false';
+    } else {
+        savedTable[tmpInd].active = 'true';
+    }
     writeJSONFile(savedTable,path);
     return true;
 }
@@ -137,4 +150,4 @@ exports.getRecord = getRecord;
 exports.addRecord = addRecord;
 exports.updateRecord = updateRecord;
 exports.deleteRecord = deleteRecord;
-exports.deactivateRecord = deactivateRecord;
+exports.checkActiveStatus = checkActiveStatus;
