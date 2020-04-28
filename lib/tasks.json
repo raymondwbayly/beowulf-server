@@ -1,5 +1,4 @@
-{
-    "tasks": [
+[
         {"id": "1", "author":"John Smith","author-id":"1", "assignee":"Ray Bayly", "assignee-id":"2", "title":"This is a task title for Ray", "body":"This is the task body and the task is described here for the user", "status":"new", "date-create":"01/01/2020", "date-complete":"02/01/2020"},
         {"id": "2", "author":"John Smith","author-id":"1", "assignee":"Ray Bayly", "assignee-id":"2", "title":"This is a task title for Ray", "body":"This is the task body and the task is described here for the user", "status":"new", "date-create":"01/01/2020", "date-complete":"02/01/2020"},
         {"id": "3", "author":"John Smith","author-id":"1", "assignee":"Ray Bayly", "assignee-id":"2", "title":"This is a task title for Ray", "body":"This is the task body and the task is described here for the user", "status":"new", "date-create":"01/01/2020", "date-complete":"02/01/2020"},
@@ -11,4 +10,3 @@
         {"id": "9", "author":"John Smith","author-id":"1", "assignee":"Ray Bayly", "assignee-id":"2", "title":"This is a task title for Ray", "body":"This is the task body and the task is described here for the user", "status":"new", "date-create":"01/01/2020", "date-complete":"02/01/2020"},
         {"id": "10", "author":"John Smith","author-id":"1", "assignee":"Ray Bayly", "assignee-id":"2", "title":"This is a task title for Ray", "body":"This is the task body and the task is described here for the user", "status":"new", "date-create":"01/01/2020", "date-complete":"02/01/2020"}
     ]
-}
