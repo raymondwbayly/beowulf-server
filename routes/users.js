@@ -1,33 +1,23 @@
 var express = require('express');
 var router = express.Router();
-var path = require('path');
-var fs = require('fs');
-var Records = require('../bin/records');
 var Msg = require('../bin/messages');
 var Sec = require('../bin/security');
+var jsonEngine = require('../bin/json-engine');
 
-// Users File for the static data
-var usersJSON = path.join(__dirname, '../lib', 'users.json');
-var userObj =  require(usersJSON);
 
 /* GET Users listing. */
 router.get('/', function(req, res, next) {
-  if(Sec.checkCookies(req.cookies).status){
-    var readable = fs.createReadStream(usersJSON);
-    readable.pipe(res);
-  } else {
-    res.send(Sec.checkCookies(req.cookies).message);
-  }
+  res.send(jsonEngine.listRecords('users'));
 });
 
 /* GET Config Object JSON return. */
 router.get('/:uid', function(req, res, next) {
-  res.send(Records.getSingleRecord(userObj.users,req.params.uid));
+  res.send(jsonEngine.getRecord('users', req.params.uid));
 });
 
 /* GET Config Object JSON return. */
 router.get('/search/lastname/:uid', function(req, res, next) {
-  res.send(Records.searchUsers(userObj.users,req.params.uid));
+  res.send(jsonEngine.searchRecords('users', req.params.uid));
 });
 
 /* POST CREATE */
@@ -39,10 +29,11 @@ router.post('/', function(req, res, next) {
   var phone = req.body.phone;
   var mobile = req.body.mobile;
   var profile = req.body.profile;
-  var token = req.body.token;
+  var active = req.body.active;
 
   if(Sec.checkCookies(req.cookies).status){
-    var userPostJSON = {"firstname": firstname, "lastname":lastname, "date":date, "email":email, "phone":phone, "mobile":mobile , "profile":profile}
+    var userPostJSON = {"id": 0, "firstname": firstname, "lastname":lastname, "date":date, "email":email, "phone":phone, "mobile":mobile , "profile":profile,"active": active}
+    jsonEngine.addRecord('users', userPostJSON);
     res.send(Msg.getSavedMessage() + JSON.stringify(userPostJSON))
   } else {
     res.send(Sec.checkCookies(req.cookies).message);
@@ -60,11 +51,12 @@ router.put('/', function(req, res, next) {
   var phone = req.body.phone;
   var mobile = req.body.mobile;
   var profile = req.body.profile;
-  var token = req.body.token;
+  var active = req.body.active;
 
   if(Sec.checkCookies(req.cookies).status){
-    var userPostJSON = {"id":id, "firstname": firstname, "lastname":lastname, "date":date, "email":email, "phone":phone, "mobile":mobile , "profile":profile}
-    res.send(Msg.getUpdatedMessage() + JSON.stringify(userPostJSON))
+    var userPostJSON = {"id":id, "firstname": firstname, "lastname":lastname, "date":date, "email":email, "phone":phone, "mobile":mobile , "profile":profile, "active": active}
+    jsonEngine.updateRecord('users', userPostJSON);
+  res.send(Msg.getUpdatedMessage() + JSON.stringify(userPostJSON))
   } else {
     res.send(Sec.checkCookies(req.cookies).message);
   }
@@ -82,10 +74,11 @@ router.delete('/:uid', function(req, res, next) {
 });
 
 /* GET Config Object JSON return. */
-router.get('/deactivate/:uid', function(req, res, next) {
+router.get('/active/:uid', function(req, res, next) {
   
   if(Sec.checkCookies(req.cookies).status){
-    res.send('User has been deactivated on the server');
+    jsonEngine.checkActiveStatus('users', req.params.uid);
+  res.send(Msg.getActiveCheckMessage())
   } else {
     res.send(Sec.checkCookies(req.cookies).message);
   }
