@@ -96,6 +96,15 @@ const updateRecord = (table, obj) => {
         savedTable[tmpInd].email = obj.email;
         savedTable[tmpInd].active = obj.active;
     }
+    if(table === 'news'){
+        savedTable[tmpInd].id = obj.id;
+        savedTable[tmpInd].author = obj.author;
+        savedTable[tmpInd].authorid = obj.authorid;
+        savedTable[tmpInd].date = obj.date;
+        savedTable[tmpInd].media = obj.media;
+        savedTable[tmpInd].body = obj.story;
+        savedTable[tmpInd].active = obj.active;
+    }
     writeJSONFile(savedTable,path);
     return true;
 }

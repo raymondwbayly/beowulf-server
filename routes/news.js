@@ -43,8 +43,9 @@ router.put('/', function(req, res, next) {
   var media = req.body.media;
   var title = req.body.title;
   var story = req.body.story;
-  var token = req.body.token;
-  var newsPostJSON = {'id':id,'author': author, 'authorid': authorid, 'date': date, 'media': media, 'title': title, 'body': story, 'token': token}
+  var active = req.body.active;
+  var newsPostJSON = {'id':id,'author': author, 'authorid': authorid, 'date': date, 'media': media, 'title': title, 'body': story, 'active': active}
+  jsonEngine.updateRecord('news', newsPostJSON);
   res.send(Msg.getUpdatedMessage() + JSON.stringify(newsPostJSON))
 });
 

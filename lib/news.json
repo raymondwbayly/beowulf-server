@@ -71,13 +71,13 @@
   },
   {
     "id": "8",
-    "author": "John Smith",
+    "author": "Raymond Bayly",
     "author-id": "2",
-    "date": "01/08/2020",
-    "media": "https://github.com/raymondwbayly/beowulf-assets/blob/master/img/pub/news-pic-3.png?raw=true",
+    "date": "04/01/2020",
+    "media": "https://github.com/raymondwbayly/beowulf-assets/blob/master/img/pub/news-pic-3.png?raw=true\"",
     "title": "Trump to use Defense Production Act to increase swab production amid coronavirus testing shortage",
-    "body": "President Donald Trump announced on Sunday that he plans to use the Defense Production Act to increase the nation’s swab production by at least 20 million per month for coronavirus tests. Trump said the administration is close to finalizing a partnership with one manufacturer to produce an additional 10 million swabs per month for coronavirus test kits, which are used to collect specimens from a patient’s throat or nose. Trump said he is preparing to use the Defense Production Act on another manufacturer to increase its swab production by over 20 million per month. Trump did not disclose the names of the manufacturer. A FEMA spokesperson was not immediately available for comment. The president previously enacted the Defense Production Act on companies like General Motors and General Electric to manufacturer additional ventilators, although many had already ramped up production.",
-    "active": "true"
+    "active": "true",
+    "authorid": "2"
   },
   {
     "id": "9",
