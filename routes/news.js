@@ -55,4 +55,10 @@ router.delete('/:uid', function(req, res, next) {
   res.send(Msg.getDeleteMessage() + 'ID:' + req.params.uid)
 });
 
+/* GET DEACTIVATE. */
+router.get('/active/:uid', function(req, res, next) {
+  jsonEngine.checkActiveStatus('news', req.params.uid);
+  res.send(Msg.getActiveCheckMessage())
+});
+
 module.exports = router;

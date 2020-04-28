@@ -189,3 +189,8 @@ These are the task and version notes for the application,  they are filled out d
 - Search users by last name
 - Upated the POSTMAN calls as well
 
+## Feature 81 Task (Update News to use JSON engine)
+
+- Update the news system to use the JSON engine
+- Upated the POSTMAN calls as well
+

@@ -96,6 +96,7 @@ Once the server is installed, open a terminal window and to go the folder where 
 |```/alerts```                  |  POST  |  STRING   | Add an alert to the server    |
 |```/alerts```                  |  PUT   |  STRING   | Update an Alert               |
 |```/alerts/{uid}```            | DELETE |  STRING   | Deletes an Alert              |
+|```/alerts/active/{uid}```            | GET |  STRING   | Sets Active              |
 |   AUTH CALLS                                                                       |
 |```/auth```                    |  POST  | AUTH APP  |  Authorizes app on the server |
 |```/auth/user```               |  POST  | AUTH USER |  Authorizes user on server    |
@@ -125,6 +126,7 @@ Once the server is installed, open a terminal window and to go the folder where 
 |```/news```                    |  POST  | STRING    |  Add News Story               |
 |```/news```                    |  PUT   | STRING    |  Update News Story            |
 |```/news/{uid}```              | DELETE | STRING    |  Delete Story from server     |
+|```/news/active/{uid}```              | GET | STRING    |  switches active flag     |
 |   TASK CALLS                                                                       |
 |```/tasks```                   |  GET   | LIST      |  List of Users Tasks          |
 |```/tasks```                   |  POST  | STRING    |  Add a task to server         |
