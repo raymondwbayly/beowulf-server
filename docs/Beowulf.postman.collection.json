@@ -1810,7 +1810,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:3000/lookup/timezone/3",
+									"raw": "http://localhost:3000/lookup/timezone/93",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -1819,7 +1819,7 @@
 									"path": [
 										"lookup",
 										"timezone",
-										"3"
+										"93"
 									]
 								},
 								"description": "Returns a single timezone based on the index"
@@ -1860,7 +1860,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:3000/lookup/jobtitle/3",
+									"raw": "http://localhost:3000/lookup/jobtitle/12",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -1869,7 +1869,7 @@
 									"path": [
 										"lookup",
 										"jobtitle",
-										"3"
+										"12"
 									]
 								},
 								"description": "Gets single job title. "

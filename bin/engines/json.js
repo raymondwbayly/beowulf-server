@@ -4,27 +4,27 @@ var lodash = require('lodash');
 // Read the Table data 
 
 // Alerts JSON
-    var alertsJSONPath = path.join(__dirname, '../lib', 'alerts.json');
+    var alertsJSONPath = path.join(__dirname, '../../lib', 'alerts.json');
     var alertsJSON =  require(alertsJSONPath);
 
 // Config JSON
-    var configJSONPath = path.join(__dirname, '../lib', 'config.json');
+    var configJSONPath = path.join(__dirname, '../../lib', 'config.json');
     var configJSON =  require(configJSONPath);
 
 //  Release Notes
-    var releaseNotesJSONPath = path.join(__dirname, '../lib', 'release-notes.json');
+    var releaseNotesJSONPath = path.join(__dirname, '../../lib', 'release-notes.json');
     var releaseNotesJSON =  require(releaseNotesJSONPath);
 
 // news JSON
-    var newsJSONPath = path.join(__dirname, '../lib', 'news.json');
+    var newsJSONPath = path.join(__dirname, '../../lib', 'news.json');
     var newsJSON =  require(newsJSONPath);
 
 // tasks JSON
-    var tasksJSONPath = path.join(__dirname, '../lib', 'tasks.json');
+    var tasksJSONPath = path.join(__dirname, '../../lib', 'tasks.json');
     var tasksJSON =  require(tasksJSONPath);
 
 // users JSON
-var usersJSONPath = path.join(__dirname, '../lib', 'users.json');
+var usersJSONPath = path.join(__dirname, '../../lib', 'users.json');
 var usersJSON =  require(usersJSONPath);
 
 Array.prototype.remove = function(from, to) {
