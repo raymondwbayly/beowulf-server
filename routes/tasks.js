@@ -4,6 +4,7 @@ var path = require('path');
 var fs = require('fs');
 var Records = require('../bin/records');
 var Msg = require('../bin/messages');
+var jsonEngine = require('../bin/json-engine');
 
 // Alerts File for the static data
 var tasksJSON = path.join(__dirname, '../lib', 'tasks.json');
@@ -31,9 +32,9 @@ router.post('/', function(req, res, next) {
   var status = req.body.status;
   var create = req.body.create;
   var complete = req.body.complete;
-  var token = req.body.token;
+  var active = req.body.active;
 
-  var taskPostJSON = {"author":author,"author-id":authorid, "assignee":assignee, "assignee-id":assigneeid, "title":title, "body":task, "status":status, "date-create":create, "date-complete":complete}
+  var taskPostJSON = {"author":author,"author-id":authorid, "assignee":assignee, "assignee-id":assigneeid, "title":title, "body":task, "status":status, "date-create":create, "date-complete":complete, "active":active}
 
   res.send(Msg.getSavedMessage() + JSON.stringify(taskPostJSON))
 });
@@ -50,9 +51,9 @@ router.put('/', function(req, res, next) {
   var status = req.body.status;
   var create = req.body.create;
   var complete = req.body.complete;
-  var token = req.body.token;
+  var active = req.body.active;
 
-  var taskPostJSON = {"id":id,"author":author,"author-id":authorid, "assignee":assignee, "assignee-id":assigneeid, "title":title, "body":task, "status":status, "date-create":create, "date-complete":complete}
+  var taskPostJSON = {"id":id,"author":author,"author-id":authorid, "assignee":assignee, "assignee-id":assigneeid, "title":title, "body":task, "status":status, "date-create":create, "date-complete":complete, "active":active}
 
   res.send(Msg.getUpdatedMessage() + JSON.stringify(taskPostJSON))
 });

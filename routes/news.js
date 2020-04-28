@@ -1,13 +1,9 @@
 var express = require('express');
 var router = express.Router();
-var path = require('path');
-var fs = require('fs');
 var Msg = require('../bin/messages');
 var jsonEngine = require('../bin/json-engine');
 
-// Alerts File for the static data
-var newsJSON = path.join(__dirname, '../lib', 'news.json');
-var storyObj =  require(newsJSON);
+
 /* GET News listing. */
 router.get('/', function(req, res, next) {
   res.send(jsonEngine.listRecords('news'));

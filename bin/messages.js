@@ -24,7 +24,7 @@ const getUpdatedMessage = () => {
 }
 
 const getDeleteMessage = () => {
-    return 'The Record has been deleted ' + '\n'
+    return 'The Record has been deleted - (Simulated, record still exists) ' + '\n'
 }
 
 const getActiveCheckMessage = () => {
