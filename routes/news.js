@@ -2,7 +2,6 @@ var express = require('express');
 var router = express.Router();
 var path = require('path');
 var fs = require('fs');
-var Records = require('../bin/records');
 var Msg = require('../bin/messages');
 var jsonEngine = require('../bin/json-engine');
 
